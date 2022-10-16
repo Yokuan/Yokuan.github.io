@@ -245,7 +245,7 @@ $undertone-transparent: rgba(35, 36, 41, 0.1);
                     .imgBox {
                         width: 100%;
                         height: 0px;
-                        padding-bottom: 80%;     /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+                        padding-bottom: 120%;     /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
                         position: relative;
                         overflow: hidden;
                         /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
@@ -266,7 +266,7 @@ $undertone-transparent: rgba(35, 36, 41, 0.1);
                         position: absolute;
                         left: 50%;
                         top: 50%;
-                        transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
+                        transform: translate(-50%, -40%);    /* 50%为自身尺寸的一半 */
                         z-index: 2;
                         .author {
                             margin: 10px 0px;
