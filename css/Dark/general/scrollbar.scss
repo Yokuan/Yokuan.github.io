@@ -1,0 +1,25 @@
+$undertone: rgb(35, 36, 41);
+
+html {
+    overflow-y: overlay;
+    body {
+        width: 100%;
+        background-color: $undertone;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    border: 6px solid rgba(0, 0, 0, 0);
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3) inset;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.6) inset;
+}

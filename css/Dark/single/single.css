@@ -1,0 +1,1452 @@
+@charset "UTF-8";
+@media screen and (min-width: 1024px) {
+  .content {
+    padding: 0px 0px;
+  }
+  .content .container {
+    width: 100%;
+    /* 布局 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .content .container .wrap-header {
+    width: 100%;
+    background: rgb(35, 36, 41);
+  }
+  .content .container .wrap-header .header {
+    /* display: absolute; */
+    /* justify-content: center;    内容水平居中 */
+    width: 100%;
+    /* 布局 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .content .container .wrap-header .header .imgBox {
+    width: 100%;
+    height: 0px;
+    padding-bottom: 30%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+    position: relative;
+    overflow: hidden;
+    /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .content .container .wrap-header .header .imgBox .mask {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(35, 36, 41)), color-stop(rgba(35, 36, 41, 0.1)), to(transparent));
+    background-image: linear-gradient(to top, rgb(35, 36, 41), rgba(35, 36, 41, 0.1), transparent);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  .content .container .wrap-header .header .msgBox {
+    width: 85%;
+    max-width: 2048px;
+    margin: 20px 0px;
+  }
+  .content .container .wrap-header .header .msgBox .category {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content; /* 根据内容自适应长度 */
+    height: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    padding: 5px 10px;
+  }
+  .content .container .wrap-header .header .msgBox .category p {
+    font-weight: 600;
+    font-size: 8px;
+  }
+  .content .container .wrap-header .header .msgBox .category p a {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap-header .header .msgBox .title {
+    margin: 15px 0px;
+  }
+  .content .container .wrap-header .header .msgBox .title h3 {
+    font-size: 2.2em;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 20px 0 15px;
+  }
+  .content .container .wrap-header .header .msgBox .date {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .content .container .wrap-box {
+    width: 85%;
+    max-width: 2048px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px 20px;
+    /* box-sizing:border-box;  让元素变成一个模型框,使得 padding 生效 */
+    margin: 20px auto;
+  }
+  .content .container .wrap-box .wrap-left {
+    width: 75%;
+    background: rgba(242, 242, 242, 0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 20px 20px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard {
+    height: auto;
+    display: grid;
+    background: rgb(39, 40, 46); /* 背景 */
+    border: 2px solid rgb(58, 59, 68);
+    border-radius: 8px; /* 圆角 */
+    padding: 40px;
+    /* margin: 20px 60px; */
+  }
+  .content .container .wrap-box .wrap-left .articleCard .article .copyright {
+    color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .article .copyright a {
+    color: rgba(0, 0, 0, 0);
+    cursor: default;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .tagsCard {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: rgba(255, 255, 255, 0.9);
+    gap: 16px; /* 间隙 */
+    margin: 20px 0px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .tagsCard h4 {
+    white-space: nowrap; /* 文本强制不换行 */
+    margin: 2px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .tagsCard .tags {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; /* 超出范围排列到下一列 */
+    gap: 10px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .tagsCard .tags a > button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.6);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer; /*鼠标变小手*/
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd hr {
+    height: 1px;
+    border: none;
+    border-top: 2px dashed rgba(255, 255, 255, 0.3);
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px; /* 圆角 */
+    padding: 20px;
+    margin: 30px 0px;
+    font-weight: 600;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard div:first-child {
+    margin: 0px 0px 10px 0px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard .topic {
+    height: 160px; /* 专栏卡片高度*/
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px; /* 圆角 */
+    position: relative;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard .topic a .imgBox {
+    height: 100%;
+    width: 100%;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard .topic a .imgBox .img {
+    width: 0;
+    height: 100%;
+    padding-right: 100%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px; /* 圆角 */
+    /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard .topic a .imgBox .img .mask {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(transparent));
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard .topic a .content {
+    position: absolute;
+    z-index: 2;
+    margin: 20px;
+    padding: 0px;
+    bottom: 0;
+    color: rgb(255, 255, 255);
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard .topic a .content .title > h3 {
+    font-size: 24px;
+    margin: 4px 0px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard .topic a .content .description > p {
+    font-size: 14px;
+    font-weight: 350;
+    margin: 4px 0px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 8px 0px;
+    /* 悬浮窗口 */
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .expand {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 12px;
+       -moz-column-gap: 12px;
+            column-gap: 12px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .expand button {
+    height: 30px;
+    width: auto;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    border-radius: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .expand button p {
+    font-size: 6px;
+    margin: auto 2px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud {
+    /*灰色遮罩层*/
+    /*弹出层*/
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud .shadow_css {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 99;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud .window_css {
+    display: none;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgb(39, 40, 46);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 999;
+    border-radius: 5px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud .window_css .hideWindowBtn {
+    position: relative;
+    padding: 10px 10px 10px 10px;
+    text-align: right;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud .window_css .hideWindowBtn a .hideWindow {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 0px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud .window_css .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px 40px 40px 40px;
+    row-gap: 30px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud .window_css .content .qrCard .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud .window_css .content .qrCard .item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+  }
+  .content .container .wrap-box .wrap-left .pagerCard {
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    row-gap: 16px;
+    background: rgb(39, 40, 46); /* 背景 */
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 8px; /* 圆角 */
+    border-color: rgb(58, 59, 68);
+    padding: 40px;
+  }
+  .content .container .wrap-box .wrap-left .pagerCard div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(255, 255, 255);
+  }
+  .content .container .wrap-box .wrap-left .pagerCard div a {
+    color: rgb(255, 255, 255);
+  }
+  .content .container .wrap-box .warp-right {
+    position: sticky;
+    top: 20px;
+    width: 25%;
+    height: 50%;
+    background: rgba(242, 242, 242, 0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 20px 20px;
+  }
+  .content .container .wrap-box .warp-right .catalogCard {
+    /* height: 640px; */
+    background: rgb(39, 40, 46); /* 背景 */
+    border: 2px solid rgb(58, 59, 68);
+    border-radius: 8px;
+    padding: 25px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc {
+    border-radius: 5px;
+    padding-bottom: 1rem;
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc .page-header {
+    font-size: 1.2em;
+    padding: 8px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc hr {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 0;
+    /* 兼容 Firefox */
+    height: 1px;
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc .toc-nav {
+    height: auto;
+    max-height: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 4px 4px;
+    overflow-y: scroll;
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc .toc-nav ul {
+    line-height: 1rem;
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc .toc-nav ul li {
+    height: 16px;
+    padding: 8px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc .toc-nav ul ul {
+    margin-left: 1.2rem;
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc .toc-nav .nav-item:hover {
+    border-radius: 4px;
+    background: rgba(242, 242, 242, 0.2);
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc .toc-nav .nav-link {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .content .container .wrap-box .warp-right .catalogCard .gotopbtn .btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    white-space: pre-line;
+    cursor: pointer; /* 鼠标小手样式 */
+  }
+  .content .container .wrap-box .warp-right .catalogCard .gotopbtn .goTopBtn:hover {
+    /* box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1); */
+    border: 1px solid rgb(151, 151, 151);
+    background: rgba(242, 242, 242, 0.5);
+  }
+  .content .container .wrap-box .warp-right .otherCard {
+    height: 140px;
+    background: rgba(255, 255, 255, 0); /* 背景 */
+    -webkit-box-shadow: 0px 5px 16px rgba(235, 235, 235, 0);
+            box-shadow: 0px 5px 16px rgba(235, 235, 235, 0); /* 阴影 */
+    border-radius: 8px; /* 圆角 */
+    /* padding: 25px; */
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .content {
+    padding: 0px 0px;
+  }
+  .content .container {
+    width: 100%;
+    /* 布局 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .content .container .wrap-header {
+    width: 100%;
+    background: rgb(35, 36, 41);
+  }
+  .content .container .wrap-header .header {
+    /* display: absolute; */
+    /* justify-content: center;    内容水平居中 */
+    width: 100%;
+    /* 布局 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .content .container .wrap-header .header .imgBox {
+    width: 100%;
+    height: 0px;
+    padding-bottom: 40%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+    position: relative;
+    overflow: hidden;
+    /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .content .container .wrap-header .header .imgBox .mask {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(35, 36, 41)), color-stop(rgba(35, 36, 41, 0.1)), to(transparent));
+    background-image: linear-gradient(to top, rgb(35, 36, 41), rgba(35, 36, 41, 0.1), transparent);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  .content .container .wrap-header .header .msgBox {
+    width: 90%;
+    max-width: 2048px;
+    margin: 20px 0px;
+  }
+  .content .container .wrap-header .header .msgBox .category {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content; /* 根据内容自适应长度 */
+    height: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    padding: 5px 10px;
+  }
+  .content .container .wrap-header .header .msgBox .category p {
+    font-weight: 600;
+    font-size: 8px;
+  }
+  .content .container .wrap-header .header .msgBox .category p a {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap-header .header .msgBox .title {
+    margin: 15px 0px;
+  }
+  .content .container .wrap-header .header .msgBox .title h3 {
+    font-size: 2.2em;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 20px 0 15px;
+  }
+  .content .container .wrap-header .header .msgBox .date {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .content .container .wrap-box {
+    width: 90%;
+    max-width: 2048px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px 20px;
+    /* box-sizing:border-box;  让元素变成一个模型框,使得 padding 生效 */
+    margin: 20px auto;
+  }
+  .content .container .wrap-box .wrap-left {
+    width: 100%;
+    background: rgba(242, 242, 242, 0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 20px 20px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard {
+    height: auto;
+    display: grid;
+    background: rgb(39, 40, 46); /* 背景 */
+    border: 2px solid rgb(58, 59, 68);
+    border-radius: 8px; /* 圆角 */
+    padding: 40px;
+    /* margin: 20px 60px; */
+  }
+  .content .container .wrap-box .wrap-left .articleCard .article .copyright {
+    color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .article .copyright a {
+    color: rgba(0, 0, 0, 0);
+    cursor: default;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .tagsCard {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: rgba(255, 255, 255, 0.9);
+    gap: 16px; /* 间隙 */
+    margin: 20px 0px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .tagsCard h4 {
+    white-space: nowrap; /* 文本强制不换行 */
+    margin: 2px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .tagsCard .tags {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; /* 超出范围排列到下一列 */
+    gap: 10px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .tagsCard .tags a > button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.6);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer; /*鼠标变小手*/
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd hr {
+    height: 1px;
+    border: none;
+    border-top: 2px dashed rgba(255, 255, 255, 0.3);
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px; /* 圆角 */
+    padding: 20px;
+    margin: 30px 0px;
+    font-weight: 600;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard div:first-child {
+    margin: 0px 0px 10px 0px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard .topic {
+    height: 160px; /* 专栏卡片高度*/
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px; /* 圆角 */
+    position: relative;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard .topic a .imgBox {
+    height: 100%;
+    width: 100%;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard .topic a .imgBox .img {
+    width: 0;
+    height: 100%;
+    padding-right: 100%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px; /* 圆角 */
+    /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard .topic a .imgBox .img .mask {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(transparent));
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard .topic a .content {
+    position: absolute;
+    z-index: 2;
+    margin: 20px;
+    padding: 0px;
+    bottom: 0;
+    color: rgb(255, 255, 255);
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard .topic a .content .title > h3 {
+    font-size: 24px;
+    margin: 4px 0px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard .topic a .content .description > p {
+    font-size: 14px;
+    font-weight: 350;
+    margin: 4px 0px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 8px 0px;
+    /* 悬浮窗口 */
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .expand {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 12px;
+       -moz-column-gap: 12px;
+            column-gap: 12px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .expand button {
+    height: 30px;
+    width: auto;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    border-radius: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .expand button p {
+    font-size: 6px;
+    margin: auto 2px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud {
+    /*灰色遮罩层*/
+    /*弹出层*/
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud .shadow_css {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 99;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud .window_css {
+    display: none;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgb(39, 40, 46);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 999;
+    border-radius: 5px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud .window_css .hideWindowBtn {
+    position: relative;
+    padding: 10px 10px 10px 10px;
+    text-align: right;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud .window_css .hideWindowBtn a .hideWindow {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 0px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud .window_css .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px 40px 40px 40px;
+    row-gap: 30px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud .window_css .content .qrCard .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud .window_css .content .qrCard .item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+  }
+  .content .container .wrap-box .wrap-left .pagerCard {
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    row-gap: 16px;
+    background: rgb(39, 40, 46); /* 背景 */
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 8px; /* 圆角 */
+    border-color: rgb(58, 59, 68);
+    padding: 40px;
+  }
+  .content .container .wrap-box .wrap-left .pagerCard div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(255, 255, 255);
+  }
+  .content .container .wrap-box .wrap-left .pagerCard div a {
+    color: rgb(255, 255, 255);
+  }
+  .content .container .wrap-box .warp-right {
+    position: sticky;
+    top: 20px;
+    width: 25%;
+    height: 50%;
+    background: rgba(242, 242, 242, 0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 20px 20px;
+  }
+  .content .container .wrap-box .warp-right .catalogCard {
+    /* height: 640px; */
+    background: rgb(39, 40, 46); /* 背景 */
+    border: 2px solid rgb(58, 59, 68);
+    border-radius: 8px;
+    padding: 25px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc {
+    border-radius: 5px;
+    padding-bottom: 1rem;
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc .page-header {
+    font-size: 1.2em;
+    padding: 8px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc hr {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 0;
+    /* 兼容 Firefox */
+    height: 1px;
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc .toc-nav {
+    height: auto;
+    max-height: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 4px 4px;
+    overflow-y: scroll;
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc .toc-nav ul {
+    line-height: 1rem;
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc .toc-nav ul li {
+    height: 16px;
+    padding: 8px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc .toc-nav ul ul {
+    margin-left: 1.2rem;
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc .toc-nav .nav-item:hover {
+    border-radius: 4px;
+    background: rgba(242, 242, 242, 0.2);
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc .toc-nav .nav-link {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .content .container .wrap-box .warp-right .catalogCard .gotopbtn .goTopBtn {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    white-space: pre-line;
+    cursor: pointer; /* 鼠标小手样式 */
+  }
+  .content .container .wrap-box .warp-right .catalogCard .gotopbtn .goTopBtn:hover {
+    /* box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1); */
+    border: 1px solid rgb(151, 151, 151);
+    background: rgba(242, 242, 242, 0.5);
+  }
+  .content .container .wrap-box .warp-right .otherCard {
+    height: 140px;
+    background: rgba(255, 255, 255, 0); /* 背景 */
+    -webkit-box-shadow: 0px 5px 16px rgba(235, 235, 235, 0);
+            box-shadow: 0px 5px 16px rgba(235, 235, 235, 0); /* 阴影 */
+    border-radius: 8px; /* 圆角 */
+    /* padding: 25px; */
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .content {
+    padding: 0px 0px;
+  }
+  .content .container {
+    width: 100%;
+    /* 布局 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .content .container .wrap-header {
+    width: 100%;
+    background: rgb(35, 36, 41);
+  }
+  .content .container .wrap-header .header {
+    /* display: absolute; */
+    /* justify-content: center;    内容水平居中 */
+    width: 100%;
+    /* 布局 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .content .container .wrap-header .header .imgBox {
+    width: 100%;
+    height: 0px;
+    padding-bottom: 50%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+    position: relative;
+    overflow: hidden;
+    /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .content .container .wrap-header .header .imgBox .mask {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(35, 36, 41)), color-stop(rgba(35, 36, 41, 0.1)), to(transparent));
+    background-image: linear-gradient(to top, rgb(35, 36, 41), rgba(35, 36, 41, 0.1), transparent);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  .content .container .wrap-header .header .msgBox {
+    width: 95%;
+    max-width: 2048px;
+    margin: 20px 0px;
+  }
+  .content .container .wrap-header .header .msgBox .category {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content; /* 根据内容自适应长度 */
+    height: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    padding: 5px 10px;
+  }
+  .content .container .wrap-header .header .msgBox .category p {
+    font-weight: 600;
+    font-size: 8px;
+  }
+  .content .container .wrap-header .header .msgBox .category p a {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap-header .header .msgBox .title {
+    margin: 15px 0px;
+  }
+  .content .container .wrap-header .header .msgBox .title h3 {
+    font-size: 2.2em;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 20px 0 15px;
+  }
+  .content .container .wrap-header .header .msgBox .date {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .content .container .wrap-box {
+    width: 95%;
+    max-width: 2048px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px 20px;
+    /* box-sizing:border-box;  让元素变成一个模型框,使得 padding 生效 */
+    margin: 20px auto;
+  }
+  .content .container .wrap-box .wrap-left {
+    width: 100%;
+    background: rgba(242, 242, 242, 0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 20px 20px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard {
+    height: auto;
+    display: grid;
+    background: rgb(39, 40, 46); /* 背景 */
+    border: 2px solid rgb(58, 59, 68);
+    border-radius: 8px; /* 圆角 */
+    padding: 40px;
+    /* margin: 20px 60px; */
+  }
+  .content .container .wrap-box .wrap-left .articleCard .article .copyright {
+    color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .article .copyright a {
+    color: rgba(0, 0, 0, 0);
+    cursor: default;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .tagsCard {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: rgba(255, 255, 255, 0.9);
+    gap: 16px; /* 间隙 */
+    margin: 20px 0px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .tagsCard h4 {
+    white-space: nowrap; /* 文本强制不换行 */
+    margin: 2px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .tagsCard .tags {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; /* 超出范围排列到下一列 */
+    gap: 10px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .tagsCard .tags a > button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.6);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer; /*鼠标变小手*/
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd hr {
+    height: 1px;
+    border: none;
+    border-top: 2px dashed rgba(255, 255, 255, 0.3);
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px; /* 圆角 */
+    padding: 20px;
+    margin: 30px 0px;
+    font-weight: 600;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard div:first-child {
+    margin: 0px 0px 10px 0px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard .topic {
+    height: 160px; /* 专栏卡片高度*/
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px; /* 圆角 */
+    position: relative;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard .topic a .imgBox {
+    height: 100%;
+    width: 100%;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard .topic a .imgBox .img {
+    width: 0;
+    height: 100%;
+    padding-right: 100%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px; /* 圆角 */
+    /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard .topic a .imgBox .img .mask {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(transparent));
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard .topic a .content {
+    position: absolute;
+    z-index: 2;
+    margin: 20px;
+    padding: 0px;
+    bottom: 0;
+    color: rgb(255, 255, 255);
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard .topic a .content .title > h3 {
+    font-size: 24px;
+    margin: 4px 0px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .topicsCard .topic a .content .description > p {
+    font-size: 14px;
+    font-weight: 350;
+    margin: 4px 0px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 8px 0px;
+    /* 悬浮窗口 */
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .expand {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 12px;
+       -moz-column-gap: 12px;
+            column-gap: 12px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .expand button {
+    height: 30px;
+    width: auto;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    border-radius: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .expand button p {
+    font-size: 6px;
+    margin: auto 2px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud {
+    /*灰色遮罩层*/
+    /*弹出层*/
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud .shadow_css {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 99;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud .window_css {
+    display: none;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgb(39, 40, 46);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 999;
+    border-radius: 5px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud .window_css .hideWindowBtn {
+    position: relative;
+    padding: 10px 10px 10px 10px;
+    text-align: right;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud .window_css .hideWindowBtn a .hideWindow {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 0px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud .window_css .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px 40px 40px 40px;
+    row-gap: 30px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud .window_css .content .qrCard .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .content .container .wrap-box .wrap-left .articleCard .articleEnd .expandCard .applaud .window_css .content .qrCard .item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+  }
+  .content .container .wrap-box .wrap-left .pagerCard {
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    row-gap: 16px;
+    background: rgb(39, 40, 46); /* 背景 */
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 8px; /* 圆角 */
+    border-color: rgb(58, 59, 68);
+    padding: 40px;
+  }
+  .content .container .wrap-box .wrap-left .pagerCard div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(255, 255, 255);
+  }
+  .content .container .wrap-box .wrap-left .pagerCard div a {
+    color: rgb(255, 255, 255);
+  }
+  .content .container .wrap-box .warp-right {
+    position: sticky;
+    top: 20px;
+    width: 25%;
+    height: 50%;
+    background: rgba(242, 242, 242, 0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 20px 20px;
+  }
+  .content .container .wrap-box .warp-right .catalogCard {
+    /* height: 640px; */
+    background: rgb(39, 40, 46); /* 背景 */
+    border: 2px solid rgb(58, 59, 68);
+    border-radius: 8px;
+    padding: 25px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc {
+    border-radius: 5px;
+    padding-bottom: 1rem;
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc .page-header {
+    font-size: 1.2em;
+    padding: 8px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc hr {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 0;
+    /* 兼容 Firefox */
+    height: 1px;
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc .toc-nav {
+    height: auto;
+    max-height: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 4px 4px;
+    overflow-y: scroll;
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc .toc-nav ul {
+    line-height: 1rem;
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc .toc-nav ul li {
+    height: 16px;
+    padding: 8px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc .toc-nav ul ul {
+    margin-left: 1.2rem;
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc .toc-nav .nav-item:hover {
+    border-radius: 4px;
+    background: rgba(242, 242, 242, 0.2);
+  }
+  .content .container .wrap-box .warp-right .catalogCard .catalog .toc .toc-nav .nav-link {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .content .container .wrap-box .warp-right .catalogCard .gotopbtn .goTopBtn {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    white-space: pre-line;
+    cursor: pointer; /* 鼠标小手样式 */
+  }
+  .content .container .wrap-box .warp-right .catalogCard .gotopbtn .goTopBtn:hover {
+    /* box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1); */
+    border: 1px solid rgb(151, 151, 151);
+    background: rgba(242, 242, 242, 0.5);
+  }
+  .content .container .wrap-box .warp-right .otherCard {
+    height: 140px;
+    background: rgba(255, 255, 255, 0); /* 背景 */
+    -webkit-box-shadow: 0px 5px 16px rgba(235, 235, 235, 0);
+            box-shadow: 0px 5px 16px rgba(235, 235, 235, 0); /* 阴影 */
+    border-radius: 8px; /* 圆角 */
+    /* padding: 25px; */
+  }
+}

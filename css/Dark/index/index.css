@@ -1,0 +1,2186 @@
+@charset "UTF-8";
+@media screen and (min-width: 1024px) {
+  .sitebar {
+    height: 0px;
+    /* 定位 */
+    position: sticky;
+    /* top: 0px; */
+    z-index: 999;
+  }
+  .sitebar .container {
+    height: 100px;
+    /* background: rgba(0, 0, 0, 0.15); */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)), color-stop(rgba(0, 0, 0, 0.6)), to(transparent));
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.6), transparent);
+    width: 100%;
+    -webkit-box-shadow: 5px 5px 10px rgba(163, 163, 163, 0);
+            box-shadow: 5px 5px 10px rgba(163, 163, 163, 0);
+    /* 布局 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .sitebar .container .wrap {
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; /* 两端对齐 */
+  }
+  .sitebar .container .wrap .left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .sitebar .container .wrap .left a {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.7);
+  }
+  .sitebar .container .wrap .left .siteLogo {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .sitebar .container .wrap .left .siteLogo img {
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+  }
+  .sitebar .container .wrap .left .siteName {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .sitebar .container .wrap .left .siteName h3 {
+    font-size: 24px;
+    padding: 0px 0px 0px 16px;
+  }
+  .sitebar .container .wrap .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .sitebar .container .wrap .right a {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .banner .container {
+    width: 100%;
+    /* 布局 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .banner .container .wrap {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    background: rgb(35, 36, 41);
+  }
+  .banner .container .wrap .header {
+    /* width: 100%; */
+    /* height: 500px; */
+    background: rgb(35, 36, 41);
+    position: relative;
+  }
+  .banner .container .wrap .header .imgBox {
+    width: 100%;
+    height: 0px;
+    padding-bottom: 45%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+    position: relative;
+    overflow: hidden;
+    /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .banner .container .wrap .header .imgBox .mask {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(35, 36, 41)), color-stop(rgba(35, 36, 41, 0.1)), to(transparent));
+    background-image: linear-gradient(to top, rgb(35, 36, 41), rgba(35, 36, 41, 0.1), transparent);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  .banner .container .wrap .header .msgBox {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); /* 50%为自身尺寸的一半 */
+    /* bottom: 25%; */
+    z-index: 2;
+    /* margin: 60px */
+  }
+  .banner .container .wrap .header .msgBox .slogan {
+    margin: 10px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    text-align: center;
+  }
+  .banner .container .wrap .header .msgBox .slogan h3 {
+    font-size: 3vw;
+    text-shadow: 0px 8px 32px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    margin: 2.5vw 0px;
+    line-height: 40px;
+  }
+  .banner .container .wrap .header .msgBox .slogan p {
+    font-size: 1vw;
+    text-shadow: 0px 4px 16px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+  .content {
+    padding: 50px 0px;
+  }
+  .content .container {
+    width: 100%;
+    /* 布局 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .content .container .wrap {
+    width: 85%;
+    max-width: 2048px;
+    background: rgb(35, 36, 41);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px 20px;
+    /* box-sizing:border-box;  让元素变成一个模型框,使得 padding 生效 */
+    margin: 20px auto;
+  }
+  .content .container .wrap .wrap-left {
+    width: 20%;
+    height: 50%;
+    background: rgb(35, 36, 41);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 20px 20px;
+    position: sticky;
+    top: 20px;
+    z-index: 997;
+  }
+  .content .container .wrap .wrap-left .dataCard {
+    width: 100%;
+    /* height: 600px; */
+    background: rgb(39, 40, 46); /* 背景 */
+    border: 2px solid rgb(58, 59, 68);
+    border-radius: 8px; /* 圆角 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .content .container .wrap .wrap-left .dataCard .statistics {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; /* 两端对齐*/
+    padding: 25px 25px 10px 25px;
+  }
+  .content .container .wrap .wrap-left .dataCard .statistics .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .content .container .wrap .wrap-left .dataCard .statistics .item .data {
+    font-size: 28px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap .wrap-left .dataCard .statistics .item .name {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    padding: 10px 25px 10px 25px;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar {
+    /* position: relative; */
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column; /*表示先列后行*/
+    place-content: start; /*从起始点开始放置子盒子*/
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-gap: 4px;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* z-index: 998; */
+    /* 悬浮窗 */
+    /* 贡献点样式 */
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .point {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    border: 1px solid rgba(58, 59, 68, 0);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 25%; /* 圆角 */
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .point-hover {
+    border: 1px solid rgb(128, 129, 148) !important;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .point-popup {
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: absolute;
+    width: 145px;
+    height: 30px;
+    border: 0;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #27282e;
+    border: 1px solid rgb(128, 129, 148) !important;
+    -webkit-box-shadow: 0 0 6px -1px rgba(140, 146, 163, 0.5);
+            box-shadow: 0 0 6px -1px rgba(140, 146, 163, 0.5);
+    z-index: 999;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .point-popup div {
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .open-point-popup {
+    display: block;
+    -webkit-animation: OpenPopupAnimation 0.2s ease;
+            animation: OpenPopupAnimation 0.2s ease;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .close-point-popup {
+    display: none;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .a-type-point {
+    background-color: #0e4429 !important;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .b-type-point {
+    background-color: #208b37 !important;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .c-type-point {
+    background-color: #39d353 !important;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .d-type-point {
+    background-color: #474954 !important;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .monthsBar {
+    width: 100%;
+    height: 50px;
+    font-size: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .content .container .wrap .wrap-right {
+    width: 80%;
+    background: rgb(35, 36, 41);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 40px 40px;
+  }
+  .content .container .wrap .wrap-right .postsCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 20px 20px;
+  }
+  .content .container .wrap .wrap-right .postsCard h2 {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 24px 24px;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a {
+    color: #000000;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px 20px;
+    height: 180px;
+    background: rgb(39, 40, 46); /* 背景 */
+    border: 2px solid rgb(58, 59, 68);
+    border-radius: 8px; /* 圆角 */
+    -webkit-transition: all 1s linear;
+    transition: all 1s linear;
+    padding: 20px;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .imgBox {
+    height: 100%;
+    width: 100%;
+    border-radius: 6px; /* 圆角 */
+    overflow: hidden;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .imgBox .img {
+    width: 0;
+    height: 100%;
+    padding-right: 100%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px; /* 圆角 */
+    /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+    z-index: 1;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; /* 两端对齐，垂直方向*/
+    gap: 20px 20px;
+    padding: 8px;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; /* 两端对齐，垂直方向*/
+    gap: 10px 20px;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .title h3 {
+    margin: 0px;
+    line-height: 25px; /* 文字行间距 */
+    /* 文字溢出部分截断 */
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .title p {
+    color: rgba(0, 0, 0, 0.5);
+    /* 文字溢出部分截断 */
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .abstractBox {
+    /* width: auto; */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .abstractBox .left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 16px;
+       -moz-column-gap: 16px;
+            column-gap: 16px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .abstractBox .left .date {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 8px;
+       -moz-column-gap: 8px;
+            column-gap: 8px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .abstractBox .left .readingtime {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 8px;
+       -moz-column-gap: 8px;
+            column-gap: 8px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .abstractBox .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 16px;
+       -moz-column-gap: 16px;
+            column-gap: 16px;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .abstractBox .right .category {
+    font-size: 10px;
+    color: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    padding: 4px 8px;
+    border-radius: 4px; /* 圆角 */
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card:hover {
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+    -webkit-transform: scale(1.005);
+            transform: scale(1.005);
+    -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+    border: 2px solid rgb(85, 86, 99);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card:hover #img {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts .view {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts .view a {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts .view a h5 {
+    margin: 0px;
+  }
+  .content .container .wrap .wrap-right .postsCard .emptyPosts {
+    height: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .content .container .wrap .wrap-right .postsCard .emptyPosts p {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .content .container .wrap .wrap-right .topicsCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 20px 20px;
+  }
+  .content .container .wrap .wrap-right .topicsCard h2 {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a {
+    color: #000;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px 10px;
+    width: 100%;
+    height: 180px;
+    background: rgb(39, 40, 46); /* 背景 */
+    border: 2px solid rgb(58, 59, 68);
+    border-radius: 8px; /* 圆角 */
+    -webkit-transition: all 1s linear;
+    transition: all 1s linear;
+    position: relative;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card .imgBox {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px; /* 圆角 */
+    overflow: hidden;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card .imgBox .img {
+    width: 0;
+    height: 100%;
+    padding-right: 100%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px; /* 圆角 */
+    /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card .imgBox .img .mask {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(transparent));
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card .detailBox {
+    position: absolute;
+    z-index: 2;
+    margin: 20px;
+    padding: 0px;
+    bottom: 0;
+    color: rgb(255, 255, 255);
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card .detailBox .title {
+    font-size: 18px;
+    margin: 4px 0px;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card .detailBox .title h3 {
+    margin: 0px 0px;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card .detailBox .description {
+    font-size: 10px;
+    font-weight: 350;
+    margin: 4px 0px;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card:hover {
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+    -webkit-transform: scale(1.005);
+            transform: scale(1.005);
+    -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+    border: 2px solid rgb(85, 86, 99);
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card:hover #img {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .sitebar {
+    height: 0px;
+    /* 定位 */
+    position: sticky;
+    /* top: 0px; */
+    z-index: 999;
+  }
+  .sitebar .container {
+    height: 100px;
+    /* background: rgba(0, 0, 0, 0.15); */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)), color-stop(rgba(0, 0, 0, 0.6)), to(transparent));
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.6), transparent);
+    width: 100%;
+    -webkit-box-shadow: 5px 5px 10px rgba(163, 163, 163, 0);
+            box-shadow: 5px 5px 10px rgba(163, 163, 163, 0);
+    /* 布局 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .sitebar .container .wrap {
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; /* 两端对齐 */
+  }
+  .sitebar .container .wrap .left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .sitebar .container .wrap .left a {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.7);
+  }
+  .sitebar .container .wrap .left .siteLogo {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .sitebar .container .wrap .left .siteLogo img {
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+  }
+  .sitebar .container .wrap .left .siteName {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .sitebar .container .wrap .left .siteName h3 {
+    font-size: 20px;
+    padding: 0px 0px 0px 16px;
+  }
+  .sitebar .container .wrap .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .sitebar .container .wrap .right a {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .banner .container {
+    width: 100%;
+    /* 布局 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .banner .container .wrap {
+    width: 100%;
+    background: rgb(35, 36, 41);
+  }
+  .banner .container .wrap .header {
+    /* width: 100%; */
+    /* height: 500px; */
+    background: rgb(35, 36, 41);
+    position: relative;
+  }
+  .banner .container .wrap .header .imgBox {
+    width: 100%;
+    height: 0px;
+    padding-bottom: 60%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+    position: relative;
+    overflow: hidden;
+    /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .banner .container .wrap .header .imgBox .mask {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(35, 36, 41)), color-stop(rgba(35, 36, 41, 0.1)), to(transparent));
+    background-image: linear-gradient(to top, rgb(35, 36, 41), rgba(35, 36, 41, 0.1), transparent);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  .banner .container .wrap .header .msgBox {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); /* 50%为自身尺寸的一半 */
+    /* bottom: 25%; */
+    z-index: 2;
+    /* margin: 60px */
+  }
+  .banner .container .wrap .header .msgBox .slogan {
+    margin: 10px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    text-align: center;
+  }
+  .banner .container .wrap .header .msgBox .slogan h3 {
+    font-size: 3vw;
+    text-shadow: 0px 8px 32px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    margin: 2.5vw 0px;
+    line-height: 40px;
+  }
+  .banner .container .wrap .header .msgBox .slogan p {
+    font-size: 1vw;
+    text-shadow: 0px 4px 16px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+  .content {
+    padding: 30px 0px;
+  }
+  .content .container {
+    width: 100%;
+    /* 布局 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .content .container .wrap {
+    width: 100%;
+    max-width: 2048px;
+    background: rgb(35, 36, 41);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    gap: 20px 20px;
+    /* box-sizing:border-box;  让元素变成一个模型框,使得 padding 生效 */
+    margin: 20px auto;
+  }
+  .content .container .wrap .wrap-left {
+    width: 20%;
+    height: 50%;
+    background: rgb(35, 36, 41);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 20px 20px;
+    position: sticky;
+    top: 20px;
+    z-index: 997;
+  }
+  .content .container .wrap .wrap-left .dataCard {
+    width: 100%;
+    /* height: 600px; */
+    background: rgb(39, 40, 46); /* 背景 */
+    border: 2px solid rgb(58, 59, 68);
+    border-radius: 8px; /* 圆角 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .content .container .wrap .wrap-left .dataCard .statistics {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; /* 两端对齐*/
+    padding: 25px 25px 10px 25px;
+  }
+  .content .container .wrap .wrap-left .dataCard .statistics .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .content .container .wrap .wrap-left .dataCard .statistics .item .data {
+    font-size: 28px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap .wrap-left .dataCard .statistics .item .name {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    padding: 10px 25px 10px 25px;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar {
+    /* position: relative; */
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column; /*表示先列后行*/
+    place-content: start; /*从起始点开始放置子盒子*/
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-gap: 4px;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* z-index: 998; */
+    /* 悬浮窗 */
+    /* 贡献点样式 */
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .point {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    border: 1px solid rgba(58, 59, 68, 0);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 25%; /* 圆角 */
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .point-hover {
+    border: 1px solid rgb(128, 129, 148) !important;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .point-popup {
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: absolute;
+    width: 145px;
+    height: 30px;
+    border: 0;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #27282e;
+    border: 1px solid rgb(128, 129, 148) !important;
+    -webkit-box-shadow: 0 0 6px -1px rgba(140, 146, 163, 0.5);
+            box-shadow: 0 0 6px -1px rgba(140, 146, 163, 0.5);
+    z-index: 999;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .point-popup div {
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .open-point-popup {
+    display: block;
+    -webkit-animation: OpenPopupAnimation 0.2s ease;
+            animation: OpenPopupAnimation 0.2s ease;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .close-point-popup {
+    display: none;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .a-type-point {
+    background-color: #0e4429 !important;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .b-type-point {
+    background-color: #208b37 !important;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .c-type-point {
+    background-color: #39d353 !important;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .d-type-point {
+    background-color: #474954 !important;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .monthsBar {
+    width: 100%;
+    height: 50px;
+    font-size: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .content .container .wrap .wrap-right {
+    width: 85%;
+    background: rgb(35, 36, 41);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 40px 40px;
+  }
+  .content .container .wrap .wrap-right .postsCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 20px 20px;
+  }
+  .content .container .wrap .wrap-right .postsCard h2 {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 24px 24px;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a {
+    color: #000000;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px 20px;
+    height: 180px;
+    background: rgb(39, 40, 46); /* 背景 */
+    border: 2px solid rgb(58, 59, 68);
+    border-radius: 8px; /* 圆角 */
+    -webkit-transition: all 1s linear;
+    transition: all 1s linear;
+    padding: 20px;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .imgBox {
+    height: 100%;
+    width: 80%;
+    border-radius: 6px; /* 圆角 */
+    overflow: hidden;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .imgBox .img {
+    width: 0px;
+    height: 100%;
+    padding-right: 100%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px; /* 圆角 */
+    /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+    z-index: 1;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; /* 两端对齐，垂直方向*/
+    gap: 20px 20px;
+    padding: 8px;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; /* 两端对齐，垂直方向*/
+    gap: 10px 20px;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .title h3 {
+    margin: 0px;
+    line-height: 25px; /* 文字行间距 */
+    /* 文字溢出部分截断 */
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .title p {
+    color: rgba(0, 0, 0, 0.5);
+    /* 文字溢出部分截断 */
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .abstractBox {
+    /* width: auto; */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .abstractBox .left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 16px;
+       -moz-column-gap: 16px;
+            column-gap: 16px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .abstractBox .left .date {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 8px;
+       -moz-column-gap: 8px;
+            column-gap: 8px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .abstractBox .left .readingtime {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 8px;
+       -moz-column-gap: 8px;
+            column-gap: 8px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .abstractBox .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 16px;
+       -moz-column-gap: 16px;
+            column-gap: 16px;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .abstractBox .right .category {
+    font-size: 10px;
+    color: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    padding: 4px 8px;
+    border-radius: 4px; /* 圆角 */
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card:hover {
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+    -webkit-transform: scale(1.005);
+            transform: scale(1.005);
+    -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+    border: 2px solid rgb(85, 86, 99);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card:hover #img {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts .view {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts .view a {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts .view a h5 {
+    margin: 0px;
+  }
+  .content .container .wrap .wrap-right .postsCard .emptyPosts {
+    height: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .content .container .wrap .wrap-right .postsCard .emptyPosts p {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .content .container .wrap .wrap-right .topicsCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 20px 20px;
+  }
+  .content .container .wrap .wrap-right .topicsCard h2 {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a {
+    color: #000;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px 10px;
+    width: 100%;
+    height: 180px;
+    background: rgb(39, 40, 46); /* 背景 */
+    border: 2px solid rgb(58, 59, 68);
+    border-radius: 8px; /* 圆角 */
+    -webkit-transition: all 1s linear;
+    transition: all 1s linear;
+    position: relative;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card .imgBox {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px; /* 圆角 */
+    overflow: hidden;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card .imgBox .img {
+    width: 0;
+    height: 100%;
+    padding-right: 100%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px; /* 圆角 */
+    /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card .imgBox .img .mask {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(transparent));
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card .detailBox {
+    position: absolute;
+    z-index: 2;
+    margin: 20px;
+    padding: 0px;
+    bottom: 0;
+    color: rgb(255, 255, 255);
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card .detailBox .title {
+    font-size: 18px;
+    margin: 4px 0px;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card .detailBox .title h3 {
+    margin: 0px 0px;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card .detailBox .description {
+    font-size: 10px;
+    font-weight: 350;
+    margin: 4px 0px;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card:hover {
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+    -webkit-transform: scale(1.005);
+            transform: scale(1.005);
+    -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+    border: 2px solid rgb(85, 86, 99);
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card:hover #img {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .sitebar {
+    height: 0px;
+    /* 定位 */
+    position: sticky;
+    /* top: 0px; */
+    z-index: 999;
+  }
+  .sitebar .container {
+    height: 100px;
+    /* background: rgba(0, 0, 0, 0.15); */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)), color-stop(rgba(0, 0, 0, 0.6)), to(transparent));
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.6), transparent);
+    width: 100%;
+    -webkit-box-shadow: 5px 5px 10px rgba(163, 163, 163, 0);
+            box-shadow: 5px 5px 10px rgba(163, 163, 163, 0);
+    /* 布局 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .sitebar .container .wrap {
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; /* 两端对齐 */
+  }
+  .sitebar .container .wrap .left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .sitebar .container .wrap .left a {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.7);
+  }
+  .sitebar .container .wrap .left .siteLogo {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .sitebar .container .wrap .left .siteLogo img {
+    width: 25px;
+    height: 25px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+  }
+  .sitebar .container .wrap .left .siteName {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .sitebar .container .wrap .left .siteName h3 {
+    font-size: 16px;
+    padding: 0px 0px 0px 16px;
+  }
+  .sitebar .container .wrap .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .sitebar .container .wrap .right a {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .banner .container {
+    width: 100%;
+    /* 布局 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .banner .container .wrap {
+    width: 100%;
+    background: rgb(35, 36, 41);
+  }
+  .banner .container .wrap .header {
+    /* width: 100%; */
+    /* height: 500px; */
+    background: rgb(35, 36, 41);
+    position: relative;
+  }
+  .banner .container .wrap .header .imgBox {
+    width: 100%;
+    height: 0px;
+    padding-bottom: 80%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+    position: relative;
+    overflow: hidden;
+    /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .banner .container .wrap .header .imgBox .mask {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(35, 36, 41)), color-stop(rgba(35, 36, 41, 0.1)), to(transparent));
+    background-image: linear-gradient(to top, rgb(35, 36, 41), rgba(35, 36, 41, 0.1), transparent);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  .banner .container .wrap .header .msgBox {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); /* 50%为自身尺寸的一半 */
+    /* bottom: 25%; */
+    z-index: 2;
+    /* margin: 60px */
+  }
+  .banner .container .wrap .header .msgBox .slogan {
+    margin: 10px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    text-align: center;
+  }
+  .banner .container .wrap .header .msgBox .slogan h3 {
+    font-size: 4vw;
+    text-shadow: 0px 8px 32px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    margin: 2.5vw 0px;
+    line-height: 40px;
+  }
+  .banner .container .wrap .header .msgBox .slogan p {
+    font-size: 1vw;
+    text-shadow: 0px 4px 16px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+  .content {
+    padding: 10px 0px;
+  }
+  .content .container {
+    width: 100%;
+    /* 布局 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .content .container .wrap {
+    width: 100%;
+    max-width: 2048px;
+    background: rgb(35, 36, 41);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    gap: 20px 20px;
+    /* box-sizing:border-box;  让元素变成一个模型框,使得 padding 生效 */
+    margin: 20px auto;
+  }
+  .content .container .wrap .wrap-left {
+    width: 20%;
+    height: 50%;
+    background: rgb(35, 36, 41);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 20px 20px;
+    position: sticky;
+    top: 20px;
+    z-index: 997;
+  }
+  .content .container .wrap .wrap-left .dataCard {
+    width: 100%;
+    /* height: 600px; */
+    background: rgb(39, 40, 46); /* 背景 */
+    border: 2px solid rgb(58, 59, 68);
+    border-radius: 8px; /* 圆角 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .content .container .wrap .wrap-left .dataCard .statistics {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; /* 两端对齐*/
+    padding: 25px 25px 10px 25px;
+  }
+  .content .container .wrap .wrap-left .dataCard .statistics .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .content .container .wrap .wrap-left .dataCard .statistics .item .data {
+    font-size: 28px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap .wrap-left .dataCard .statistics .item .name {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    padding: 10px 25px 10px 25px;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar {
+    /* position: relative; */
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column; /*表示先列后行*/
+    place-content: start; /*从起始点开始放置子盒子*/
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-gap: 4px;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* z-index: 998; */
+    /* 悬浮窗 */
+    /* 贡献点样式 */
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .point {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    border: 1px solid rgba(58, 59, 68, 0);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 25%; /* 圆角 */
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .point-hover {
+    border: 1px solid rgb(128, 129, 148) !important;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .point-popup {
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: absolute;
+    width: 145px;
+    height: 30px;
+    border: 0;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #27282e;
+    border: 1px solid rgb(128, 129, 148) !important;
+    -webkit-box-shadow: 0 0 6px -1px rgba(140, 146, 163, 0.5);
+            box-shadow: 0 0 6px -1px rgba(140, 146, 163, 0.5);
+    z-index: 999;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .point-popup div {
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .open-point-popup {
+    display: block;
+    -webkit-animation: OpenPopupAnimation 0.2s ease;
+            animation: OpenPopupAnimation 0.2s ease;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .close-point-popup {
+    display: none;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .a-type-point {
+    background-color: #0e4429 !important;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .b-type-point {
+    background-color: #208b37 !important;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .c-type-point {
+    background-color: #39d353 !important;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .pointsBar .d-type-point {
+    background-color: #474954 !important;
+  }
+  .content .container .wrap .wrap-left .dataCard .hotmap .background .monthsBar {
+    width: 100%;
+    height: 50px;
+    font-size: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .content .container .wrap .wrap-right {
+    width: 90%;
+    background: rgb(35, 36, 41);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 40px 40px;
+  }
+  .content .container .wrap .wrap-right .postsCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 20px 20px;
+  }
+  .content .container .wrap .wrap-right .postsCard h2 {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 24px 24px;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a {
+    color: #000000;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px 20px;
+    height: auto;
+    background: rgb(39, 40, 46); /* 背景 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    border: 2px solid rgb(58, 59, 68);
+    border-radius: 8px; /* 圆角 */
+    -webkit-transition: all 1s linear;
+    transition: all 1s linear;
+    padding: 20px;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .imgBox {
+    height: 100%;
+    width: 100%;
+    border-radius: 6px; /* 圆角 */
+    overflow: hidden;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .imgBox .img {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 40%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px; /* 圆角 */
+    /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+    z-index: 1;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; /* 两端对齐，垂直方向*/
+    gap: 20px 20px;
+    padding: 8px;
+    padding: 0px;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; /* 两端对齐，垂直方向*/
+    gap: 10px 20px;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .title h3 {
+    margin: 0px;
+    line-height: 25px; /* 文字行间距 */
+    /* 文字溢出部分截断 */
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .title p {
+    color: rgba(0, 0, 0, 0.5);
+    /* 文字溢出部分截断 */
+    display: -webkit-box;
+    display: none;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .abstractBox {
+    /* width: auto; */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .abstractBox .left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 16px;
+       -moz-column-gap: 16px;
+            column-gap: 16px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .abstractBox .left .date {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 8px;
+       -moz-column-gap: 8px;
+            column-gap: 8px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .abstractBox .left .readingtime {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 8px;
+       -moz-column-gap: 8px;
+            column-gap: 8px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .abstractBox .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 16px;
+       -moz-column-gap: 16px;
+            column-gap: 16px;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card .detailBox .abstractBox .right .category {
+    font-size: 10px;
+    color: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    padding: 4px 8px;
+    border-radius: 4px; /* 圆角 */
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card:hover {
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+    -webkit-transform: scale(1.005);
+            transform: scale(1.005);
+    -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+    border: 2px solid rgb(85, 86, 99);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts a .card:hover #img {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts .view {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .content .container .wrap .wrap-right .postsCard .posts .view a {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap .wrap-right .postsCard .posts .view a h5 {
+    margin: 0px;
+  }
+  .content .container .wrap .wrap-right .postsCard .emptyPosts {
+    height: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+  }
+  .content .container .wrap .wrap-right .postsCard .emptyPosts p {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .content .container .wrap .wrap-right .topicsCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    gap: 20px 20px;
+  }
+  .content .container .wrap .wrap-right .topicsCard h2 {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a {
+    color: #000;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px 10px;
+    height: 180px;
+    background: rgb(39, 40, 46); /* 背景 */
+    border: 2px solid rgb(58, 59, 68);
+    border-radius: 8px; /* 圆角 */
+    -webkit-transition: all 1s linear;
+    transition: all 1s linear;
+    position: relative;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card .imgBox {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px; /* 圆角 */
+    overflow: hidden;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card .imgBox .img {
+    width: 0;
+    height: 100%;
+    padding-right: 100%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px; /* 圆角 */
+    /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card .imgBox .img .mask {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(transparent));
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card .detailBox {
+    position: absolute;
+    z-index: 2;
+    margin: 20px;
+    padding: 0px;
+    bottom: 0;
+    color: rgb(255, 255, 255);
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card .detailBox .title {
+    font-size: 18px;
+    margin: 4px 0px;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card .detailBox .title h3 {
+    margin: 0px 0px;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card .detailBox .description {
+    font-size: 10px;
+    font-weight: 350;
+    margin: 4px 0px;
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card:hover {
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+    -webkit-transform: scale(1.005);
+            transform: scale(1.005);
+    -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+    border: 2px solid rgb(85, 86, 99);
+  }
+  .content .container .wrap .wrap-right .topicsCard .topics a .card:hover #img {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}

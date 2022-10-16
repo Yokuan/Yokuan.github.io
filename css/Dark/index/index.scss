@@ -1,0 +1,1582 @@
+$undertone: rgb(35, 36, 41);
+$undertone-transparent: rgba(35, 36, 41, 0.1);
+
+@media screen and (min-width: 1024px){
+    .sitebar {
+        height: 0px;
+        /* 定位 */
+        position: sticky;
+        /* top: 0px; */
+        z-index: 999;
+        .container {
+            height: 100px;
+            /* background: rgba(0, 0, 0, 0.15); */
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6), transparent);
+            width: 100%;
+            box-shadow: 5px 5px 10px rgba(163, 163, 163, 0.0);
+            /* 布局 */
+            display: flex;              /* flex 布局 */
+            justify-content: center;    /* 内容水平居中 */
+            align-items: center;        /* 内容垂直居中 */
+            .wrap {
+                width: 85%;
+                display: flex;                      /* flex 布局 */
+                justify-content: space-between;     /* 两端对齐 */
+                .left {
+                    display: flex;          /* flex 布局 */
+                    align-items: center;    /* 内容垂直居中 */
+                    a{
+                        color: rgb(255, 255, 255);
+                        text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.7);
+                    }
+                    .siteLogo{
+                        height: 100%;
+                        display: flex;          /* flex 布局 */
+                        align-items: center;    /* 内容垂直居中 */
+                        img {
+                            width: 40px;
+                            height: 40px;
+                            border: 2px solid rgba(255, 255, 255, 1);
+                            border-radius: 50%
+                        }
+                    }
+                    .siteName {
+                        height: 100%;
+                        display: flex;          /* flex 布局 */
+                        align-items: center;    /* 内容垂直居中 */
+                        h3 {
+                            font-size: 24px;
+                            padding:0px 0px 0px 16px;
+                        }
+                    }
+                }
+                .right {
+                    display: flex;          /* flex 布局 */
+                    align-items: center;    /* 内容垂直居中 */
+                    column-gap: 20px;
+                    a {
+                        height: 100%;
+                        display: flex;          /* flex 布局 */
+                        align-items: center;    /* 内容垂直居中 */
+                    }
+                }
+            }
+        }
+    }
+
+    .banner {
+        .container {
+            width: 100%;
+            /* 布局 */
+            display: flex;              /* flex 布局 */
+            justify-content: center;    /* 内容水平居中 */
+            align-items: center;        /* 内容垂直居中 */
+            flex-direction: column;    /* 主轴方向：垂直 */
+            .wrap{
+                width: 100%;
+                justify-content: center;    /* 内容水平居中 */
+                background: $undertone;
+                .header{
+                    /* width: 100%; */
+                    /* height: 500px; */
+                    background: $undertone;
+                    position: relative;
+                    .imgBox {
+                        width: 100%;
+                        height: 0px;
+                        padding-bottom: 45%;     /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+                        position: relative;
+                        overflow: hidden;
+                        /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        background-size: cover;
+                        .mask{
+                            background-image: linear-gradient(to top, $undertone, $undertone-transparent, transparent);
+                            height: 100%;
+                            width: 100%;
+                            position: absolute;
+                            z-index: 1;
+                        }
+                    }
+                    .msgBox {
+                        position: absolute;
+                        left: 50%;
+                        top: 45%;
+                        transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
+                        /* bottom: 25%; */
+                        z-index: 2;
+                        /* margin: 60px */
+                        .slogan{
+                            margin: 10px 0px;
+                            display: flex;
+                            justify-content: center;    /* 内容水平居中 */
+                            align-items: center;        /* 内容垂直居中 */
+                            flex-direction: column;    /* 主轴方向：垂直 */
+                            text-align: center;
+                            h3{
+                                font-size: 3vw;
+                                text-shadow: 0px 8px 32px rgba(0, 0, 0, 1);
+                                color: rgb(255, 255, 255);
+                                margin: 2.5vw 0px;
+                                line-height: 40px;
+                            }
+                            p{
+                                font-size: 1vw;
+                                text-shadow: 0px 4px 16px rgba(0, 0, 0, 1);
+                                color: rgb(255, 255, 255);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        padding: 50px 0px;
+        .container {
+            width: 100%;
+            /* 布局 */
+            display: flex;              /* flex 布局 */
+            justify-content: center;    /* 内容水平居中 */
+            align-items: center;        /* 内容垂直居中 */
+            .wrap {
+                width: 85%;
+                max-width: 2048px;
+                background: $undertone;
+                display: flex;
+                gap: 20px 20px;
+                /* box-sizing:border-box;  让元素变成一个模型框,使得 padding 生效 */
+                margin: 20px auto;
+                .wrap-left{
+                    width: 20%;
+                    height: 50%;
+                    background: $undertone;
+                    display: flex;
+                    flex-direction: column;    /* 主轴方向：垂直 */
+                    gap: 20px 20px;
+                    position: sticky;
+                    top: 20px;
+                    z-index: 997;
+                    .dataCard{
+                        width: 100%;
+                        /* height: 600px; */
+                        background: rgb(39, 40, 46);                        /* 背景 */
+                        border: 2px solid rgb(58, 59, 68);
+                        border-radius: 8px;                           /* 圆角 */
+                        display: flex;
+                        flex-direction: column;    /* 主轴方向：垂直 */
+                        .statistics{
+                            display: flex;
+                            justify-content: space-between;     /* 两端对齐*/
+                            padding: 25px 25px 10px 25px;
+                            .item {
+                                display: flex;
+                                flex-direction: column;    /* 主轴方向：垂直 */
+                                .data{
+                                    font-size: 28px;
+                                    font-weight: 700;
+                                    color: rgba(255, 255, 255, 0.9);
+                                }
+                                .name{
+                                    font-size: 10px;
+                                    color: rgba(255, 255, 255, 0.6);
+                                }
+                            }
+                        }
+                        .hotmap {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;    /* 内容水平居中 */
+                            .background {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;    /* 主轴方向：垂直 */
+                                justify-content: center;    /* 内容水平居中 */
+                                align-items: center;        /* 内容垂直居中 */
+                                padding: 10px 25px 10px 25px;
+                                .pointsBar {
+                                    /* position: relative; */
+                                    width: 100%;
+                                    display: grid;
+                                    grid-auto-flow: column;  /*表示先列后行*/
+                                    place-content: start;    /*从起始点开始放置子盒子*/
+                                    grid-template-columns: repeat(12,1fr);
+                                    grid-template-rows: repeat(7,1fr);
+                                    grid-gap: 4px;
+                                    align-content: center;
+                                    align-items: center;
+                                    /* z-index: 998; */
+                                    .point{
+                                        width: 100%;
+                                        height: 0;
+                                        padding-bottom:100%;
+                                        border: 1px solid rgb(58, 59, 68, 0);
+                                        box-sizing: border-box;
+                                        border-radius: 25%;                           /* 圆角 */
+                                    }
+                                    .point-hover{
+                                        // cursor: pointer;
+                                        border: 1px solid rgb(128, 129, 148) !important;
+                                    }
+                                    /* 悬浮窗 */
+                                    .point-popup {
+                                        border-radius: 5px;
+                                        text-align: center;
+                                        padding: 5px;
+                                        box-sizing: border-box;
+                                        position: absolute;
+                                        width: 145px;
+                                        height: 30px;
+                                        border: 0;
+                                        font-size: 12px;
+                                        color: rgba(255, 255, 255, 0.8);
+                                        background-color: #27282e;
+                                        border: 1px solid rgb(128, 129, 148) !important;
+                                        box-shadow: 0 0 6px -1px rgb(140 146 163 / 50%);
+                                        z-index: 999;
+                                        div {
+                                            width: 100%;
+                                            height: 100%;
+                                            box-sizing: border-box;
+                                            display: flex;
+                                            align-content: center;
+                                            align-items: center;
+                                            justify-content: center;
+                                        }
+                                    }
+                                    .open-point-popup {
+                                        display: block;
+                                        animation: OpenPopupAnimation 0.2s ease;
+                                    }
+                                    .close-point-popup {
+                                        display: none;
+                                    }
+                                    /* 贡献点样式 */
+                                    .a-type-point {
+                                        background-color: #0e4429 !important;
+                                    }
+                                    .b-type-point {
+                                        background-color: #208b37 !important;
+                                    }
+                                    .c-type-point {
+                                        background-color: #39d353 !important;
+                                    }
+                                    .d-type-point {
+                                        background-color: #474954 !important;
+                                    }
+                                }
+                                .monthsBar {
+                                    width: 100%;
+                                    height: 50px;
+                                    font-size: 12px;
+                                    display: flex;
+                                    color: rgba(255, 255, 255, 0.5);
+                                    flex-direction: row;
+                                    flex-wrap: nowrap;
+                                    align-content: center;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                }
+                            }
+                        }
+                    }
+                }
+                .wrap-right{
+                    width: 80%;
+                    background: $undertone;
+                    display: flex;
+                    flex-direction: column;    /* 主轴方向：垂直 */
+                    gap: 40px 40px;
+                    .postsCard{
+                        display: flex;
+                        flex-direction: column;    /* 主轴方向：垂直 */
+                        gap: 20px 20px;
+                        h2 {
+                            color: rgba(255, 255, 255, 0.9);
+                        }
+                        .posts {
+                            display: flex;
+                            flex-direction: column;    /* 主轴方向：垂直 */
+                            gap: 24px 24px;
+                            a {
+                                color: #000000;
+                                .card{
+                                    display: flex;
+                                    gap: 20px 20px;
+                                    height: 180px;
+                                    background: rgb(39, 40, 46);                        /* 背景 */
+                                    border: 2px solid rgb(58, 59, 68);
+                                    border-radius: 8px;                           /* 圆角 */
+                                    transition: all 1s linear;
+                                    padding: 20px;
+                                    .imgBox{
+                                        height: 100%;
+                                        width: 100%;
+                                        border-radius: 6px;                           /* 圆角 */
+                                        overflow: hidden;
+                                        .img{
+                                            width: 0;
+                                            height: 100%;
+                                            padding-right: 100%;     /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+                                            position: relative;
+                                            overflow: hidden;
+                                            border-radius: 6px;                           /* 圆角 */
+                                            /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+                                            background-position: center center;
+                                            background-repeat: no-repeat;
+                                            -webkit-background-size: cover;
+                                            -moz-background-size: cover;
+                                            background-size: cover;
+                                            transition-duration: 0.25s;
+                                            z-index: 1;
+                                        }
+                                    }
+                                    .detailBox{
+                                        width: 100%;
+                                        display: flex;
+                                        flex-direction: column;    /* 主轴方向：垂直 */
+                                        justify-content: space-between;     /* 两端对齐，垂直方向*/
+                                        gap: 20px 20px;
+                                        padding: 8px;
+                                        .title{
+                                            display: flex;
+                                            flex-direction: column;    /* 主轴方向：垂直 */
+                                            justify-content: space-between;     /* 两端对齐，垂直方向*/
+                                            gap: 10px 20px;
+                                            h3{
+                                                margin: 0px;
+                                                line-height: 25px;      /* 文字行间距 */
+                                                /* 文字溢出部分截断 */
+                                                display: -webkit-box;
+                                                overflow: hidden;
+                                                -webkit-line-clamp: 2;
+                                                -webkit-box-orient: vertical;
+                                                color: rgba(255, 255, 255, 0.9);
+                                            }
+                                            p{
+                                                color: rgba(0, 0, 0, 0.5);
+                                                /* 文字溢出部分截断 */
+                                                display: -webkit-box;
+                                                overflow: hidden;
+                                                -webkit-line-clamp: 2;
+                                                -webkit-box-orient: vertical;
+                                                color: rgba(255, 255, 255, 0.4);
+                                            }
+                                        }
+                                        .abstractBox{
+                                            /* width: auto; */
+                                            display: flex;
+                                            justify-content: space-between;
+                                            .left{
+                                                display: flex;
+                                                column-gap: 16px;
+                                                align-items: center;        /* 内容垂直居中 */
+                                                .date{
+                                                    display: flex;
+                                                    column-gap: 8px;
+                                                    justify-content: center;    /* 内容水平居中 */
+                                                    align-items: center;        /* 内容垂直居中 */
+                                                    color: rgba(255, 255, 255, 0.7);
+                                                }
+                                                .readingtime{
+                                                    display: flex;
+                                                    column-gap: 8px;
+                                                    justify-content: center;    /* 内容水平居中 */
+                                                    align-items: center;        /* 内容垂直居中 */
+                                                    color: rgba(255, 255, 255, 0.7);
+                                                }
+                                            }
+                                            .right{
+                                                display: flex;
+                                                column-gap: 16px;
+                                                .category{
+                                                    font-size: 10px;
+                                                    color: rgb(255, 255, 255);
+                                                    background: rgba(255, 255, 255, 0.1);
+                                                    border: 0.5px solid rgba(255, 255, 255, 0.2);
+                                                    padding: 4px 8px;
+                                                    border-radius: 4px;         /* 圆角 */
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .card:hover{
+                                    transition-duration: 0.25s;
+                                    transform: scale(1.005);
+                                    transition-timing-function: linear;
+                                    border: 2px solid rgb(85, 86, 99);
+                                }
+                                .card:hover #img{
+                                    transform: scale(1.05);
+                                }
+                            }
+                            .view{
+                                display: flex;
+                                justify-content: flex-end;
+                                a{
+                                    color: rgba(255, 255, 255, 0.9);
+                                    h5{
+                                        margin: 0px;
+                                    }
+                                }
+                            }
+                        }
+                        .emptyPosts {
+                            height: 64px;
+                            display: flex;
+                            justify-content: center;    /* 内容水平居中 */
+                            align-items: center;        /* 内容垂直居中 */
+                            p {
+                                color: rgba(255, 255, 255, 0.6);
+                            }
+                        }
+                    }
+                    .topicsCard{
+                        display: flex;
+                        flex-direction: column;    /* 主轴方向：垂直 */
+                        gap: 20px 20px;
+                        h2 {
+                            color: rgba(255, 255, 255, 0.9);
+                        }
+                        .topics{
+                            display: grid;
+                            grid-gap: 20px;
+                            grid-template-columns: 1fr 1fr;
+                            a{
+                                color: #000;
+                                .card{
+                                    display: flex;
+                                    gap: 10px 10px;
+                                    width: 100%;
+                                    height: 180px;
+                                    background: rgb(39, 40, 46);                        /* 背景 */
+                                    border: 2px solid rgb(58, 59, 68);
+                                    border-radius: 8px;                           /* 圆角 */
+                                    transition: all 1s linear;
+                                    position: relative;
+                                    .imgBox{
+                                        height: 100%;
+                                        width: 100%;
+                                        border-radius: 8px;                           /* 圆角 */
+                                        overflow: hidden;
+                                        .img{
+                                            width: 0;
+                                            height: 100%;
+                                            padding-right: 100%;     /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+                                            position: relative;
+                                            overflow: hidden;
+                                            border-radius: 8px;                           /* 圆角 */
+                                            /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+                                            background-position: center center;
+                                            background-repeat: no-repeat;
+                                            -webkit-background-size: cover;
+                                            -moz-background-size: cover;
+                                            background-size: cover;
+                                            transition-duration: 0.25s;
+                                            .mask{
+                                                background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+                                                height: 100%;
+                                                width: 100%;
+                                                position: absolute;
+                                                z-index: 1;
+                                            }
+                                        }
+                                    }
+                                    .detailBox{
+                                        position: absolute;
+                                        z-index: 2;
+                                        margin: 20px;
+                                        padding: 0px;
+                                        bottom: 0;
+                                        color: rgb(255, 255, 255);
+                                        .title{
+                                            font-size: 18px;
+                                            margin: 4px 0px;
+                                            h3{
+                                                margin: 0px 0px;
+                                            }
+                                        }
+                                        .description{
+                                            font-size: 10px;
+                                            font-weight: 350;
+                                            margin: 4px 0px;
+                                        }
+                                    }
+                                }
+                                .card:hover{
+                                    transition-duration: 0.25s;
+                                    transform: scale(1.005);
+                                    transition-timing-function: linear;
+                                    border: 2px solid rgb(85, 86, 99);
+                                }
+                                .card:hover #img{
+                                    transform: scale(1.05);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 767px) and (max-width: 1023px){
+    .sitebar {
+        height: 0px;
+        /* 定位 */
+        position: sticky;
+        /* top: 0px; */
+        z-index: 999;
+        .container {
+            height: 100px;
+            /* background: rgba(0, 0, 0, 0.15); */
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6), transparent);
+            width: 100%;
+            box-shadow: 5px 5px 10px rgba(163, 163, 163, 0.0);
+            /* 布局 */
+            display: flex;              /* flex 布局 */
+            justify-content: center;    /* 内容水平居中 */
+            align-items: center;        /* 内容垂直居中 */
+            .wrap {
+                width: 85%;
+                display: flex;                      /* flex 布局 */
+                justify-content: space-between;     /* 两端对齐 */
+                .left {
+                    display: flex;          /* flex 布局 */
+                    align-items: center;    /* 内容垂直居中 */
+                    a{
+                        color: rgb(255, 255, 255);
+                        text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.7);
+                    }
+                    .siteLogo{
+                        height: 100%;
+                        display: flex;          /* flex 布局 */
+                        align-items: center;    /* 内容垂直居中 */
+                        img {
+                            width: 30px;
+                            height: 30px;
+                            border: 2px solid rgba(255, 255, 255, 1);
+                            border-radius: 50%
+                        }
+                    }
+                    .siteName {
+                        height: 100%;
+                        display: flex;          /* flex 布局 */
+                        align-items: center;    /* 内容垂直居中 */
+                        h3 {
+                            font-size: 20px;
+                            padding:0px 0px 0px 16px;
+                        }
+                    }
+                }
+                .right {
+                    display: flex;          /* flex 布局 */
+                    align-items: center;    /* 内容垂直居中 */
+                    column-gap: 20px;
+                    a {
+                        height: 100%;
+                        display: flex;          /* flex 布局 */
+                        align-items: center;    /* 内容垂直居中 */
+                    }
+                }
+            }
+        }
+    }
+
+    .banner {
+        .container {
+            width: 100%;
+            /* 布局 */
+            display: flex;              /* flex 布局 */
+            justify-content: center;    /* 内容水平居中 */
+            align-items: center;        /* 内容垂直居中 */
+            flex-direction: column;    /* 主轴方向：垂直 */
+            .wrap{
+                width: 100%;
+                background: $undertone;
+                .header{
+                    /* width: 100%; */
+                    /* height: 500px; */
+                    background: $undertone;
+                    position: relative;
+                    .imgBox {
+                        width: 100%;
+                        height: 0px;
+                        padding-bottom: 60%;     /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+                        position: relative;
+                        overflow: hidden;
+                        /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        background-size: cover;
+                        .mask{
+                            background-image: linear-gradient(to top, $undertone, $undertone-transparent, transparent);
+                            height: 100%;
+                            width: 100%;
+                            position: absolute;
+                            z-index: 1;
+                        }
+                    }
+                    .msgBox {
+                        position: absolute;
+                        left: 50%;
+                        top: 45%;
+                        transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
+                        /* bottom: 25%; */
+                        z-index: 2;
+                        /* margin: 60px */
+                        .slogan{
+                            margin: 10px 0px;
+                            display: flex;
+                            justify-content: center;    /* 内容水平居中 */
+                            align-items: center;        /* 内容垂直居中 */
+                            flex-direction: column;    /* 主轴方向：垂直 */
+                            text-align: center;
+                            h3{
+                                font-size: 3vw;
+                                text-shadow: 0px 8px 32px rgba(0, 0, 0, 1);
+                                color: rgb(255, 255, 255);
+                                margin: 2.5vw 0px;
+                                line-height: 40px;
+                            }
+                            p{
+                                font-size: 1vw;
+                                text-shadow: 0px 4px 16px rgba(0, 0, 0, 1);
+                                color: rgb(255, 255, 255);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        padding: 30px 0px;
+        .container {
+            width: 100%;
+            /* 布局 */
+            display: flex;              /* flex 布局 */
+            justify-content: center;    /* 内容水平居中 */
+            align-items: center;        /* 内容垂直居中 */
+            .wrap {
+                width: 100%;
+                max-width: 2048px;
+                background: $undertone;
+                display: flex;
+                justify-content: center;    /* 内容水平居中 */
+                gap: 20px 20px;
+                /* box-sizing:border-box;  让元素变成一个模型框,使得 padding 生效 */
+                margin: 20px auto;
+                .wrap-left{
+                    width: 20%;
+                    height: 50%;
+                    background: $undertone;
+                    display: flex;
+                    display: none;
+                    flex-direction: column;    /* 主轴方向：垂直 */
+                    gap: 20px 20px;
+                    position: sticky;
+                    top: 20px;
+                    z-index: 997;
+                    .dataCard{
+                        width: 100%;
+                        /* height: 600px; */
+                        background: rgb(39, 40, 46);                        /* 背景 */
+                        border: 2px solid rgb(58, 59, 68);
+                        border-radius: 8px;                           /* 圆角 */
+                        display: flex;
+                        flex-direction: column;    /* 主轴方向：垂直 */
+                        .statistics{
+                            display: flex;
+                            justify-content: space-between;     /* 两端对齐*/
+                            padding: 25px 25px 10px 25px;
+                            .item {
+                                display: flex;
+                                flex-direction: column;    /* 主轴方向：垂直 */
+                                .data{
+                                    font-size: 28px;
+                                    font-weight: 700;
+                                    color: rgba(255, 255, 255, 0.9);
+                                }
+                                .name{
+                                    font-size: 10px;
+                                    color: rgba(255, 255, 255, 0.6);
+                                }
+                            }
+                        }
+                        .hotmap {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;    /* 内容水平居中 */
+                            .background {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;    /* 主轴方向：垂直 */
+                                justify-content: center;    /* 内容水平居中 */
+                                align-items: center;        /* 内容垂直居中 */
+                                padding: 10px 25px 10px 25px;
+                                .pointsBar {
+                                    /* position: relative; */
+                                    width: 100%;
+                                    display: grid;
+                                    grid-auto-flow: column;  /*表示先列后行*/
+                                    place-content: start;    /*从起始点开始放置子盒子*/
+                                    grid-template-columns: repeat(12,1fr);
+                                    grid-template-rows: repeat(7,1fr);
+                                    grid-gap: 4px;
+                                    align-content: center;
+                                    align-items: center;
+                                    /* z-index: 998; */
+                                    .point{
+                                        width: 100%;
+                                        height: 0;
+                                        padding-bottom:100%;
+                                        border: 1px solid rgb(58, 59, 68, 0);
+                                        box-sizing: border-box;
+                                        border-radius: 25%;                           /* 圆角 */
+                                    }
+                                    .point-hover{
+                                        // cursor: pointer;
+                                        border: 1px solid rgb(128, 129, 148) !important;
+                                    }
+                                    /* 悬浮窗 */
+                                    .point-popup {
+                                        border-radius: 5px;
+                                        text-align: center;
+                                        padding: 5px;
+                                        box-sizing: border-box;
+                                        position: absolute;
+                                        width: 145px;
+                                        height: 30px;
+                                        border: 0;
+                                        font-size: 12px;
+                                        color: rgba(255, 255, 255, 0.8);
+                                        background-color: #27282e;
+                                        border: 1px solid rgb(128, 129, 148) !important;
+                                        box-shadow: 0 0 6px -1px rgb(140 146 163 / 50%);
+                                        z-index: 999;
+                                        div {
+                                            width: 100%;
+                                            height: 100%;
+                                            box-sizing: border-box;
+                                            display: flex;
+                                            align-content: center;
+                                            align-items: center;
+                                            justify-content: center;
+                                        }
+                                    }
+                                    .open-point-popup {
+                                        display: block;
+                                        animation: OpenPopupAnimation 0.2s ease;
+                                    }
+                                    .close-point-popup {
+                                        display: none;
+                                    }
+                                    /* 贡献点样式 */
+                                    .a-type-point {
+                                        background-color: #0e4429 !important;
+                                    }
+                                    .b-type-point {
+                                        background-color: #208b37 !important;
+                                    }
+                                    .c-type-point {
+                                        background-color: #39d353 !important;
+                                    }
+                                    .d-type-point {
+                                        background-color: #474954 !important;
+                                    }
+                                }
+                                .monthsBar {
+                                    width: 100%;
+                                    height: 50px;
+                                    font-size: 12px;
+                                    display: flex;
+                                    color: rgba(255, 255, 255, 0.5);
+                                    flex-direction: row;
+                                    flex-wrap: nowrap;
+                                    align-content: center;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                }
+                            }
+                        }
+                    }
+                }
+                .wrap-right{
+                    width: 85%;
+                    background: $undertone;
+                    display: flex;
+                    flex-direction: column;    /* 主轴方向：垂直 */
+                    gap: 40px 40px;
+                    .postsCard{
+                        display: flex;
+                        flex-direction: column;    /* 主轴方向：垂直 */
+                        gap: 20px 20px;
+                        h2 {
+                            color: rgba(255, 255, 255, 0.9);
+                        }
+                        .posts{
+                            display: flex;
+                            flex-direction: column;    /* 主轴方向：垂直 */
+                            gap: 24px 24px;
+                            a {
+                                color: #000000;
+                                .card{
+                                    display: flex;
+                                    gap: 20px 20px;
+                                    height: 180px;
+                                    background: rgb(39, 40, 46);                        /* 背景 */
+                                    border: 2px solid rgb(58, 59, 68);
+                                    border-radius: 8px;                           /* 圆角 */
+                                    transition: all 1s linear;
+                                    padding: 20px;
+                                    .imgBox{
+                                        height: 100%;
+                                        width: 80%;
+                                        border-radius: 6px;                           /* 圆角 */
+                                        overflow: hidden;
+                                        .img{
+                                            width: 0px;
+                                            height: 100%;
+                                            padding-right: 100%;     /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+                                            position: relative;
+                                            overflow: hidden;
+                                            border-radius: 6px;                           /* 圆角 */
+                                            /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+                                            background-position: center center;
+                                            background-repeat: no-repeat;
+                                            -webkit-background-size: cover;
+                                            -moz-background-size: cover;
+                                            background-size: cover;
+                                            transition-duration: 0.25s;
+                                            z-index: 1;
+                                        }
+                                    }
+                                    .detailBox{
+                                        width: 100%;
+                                        display: flex;
+                                        flex-direction: column;    /* 主轴方向：垂直 */
+                                        justify-content: space-between;     /* 两端对齐，垂直方向*/
+                                        gap: 20px 20px;
+                                        padding: 8px;
+                                        .title{
+                                            display: flex;
+                                            flex-direction: column;    /* 主轴方向：垂直 */
+                                            justify-content: space-between;     /* 两端对齐，垂直方向*/
+                                            gap: 10px 20px;
+                                            h3{
+                                                margin: 0px;
+                                                line-height: 25px;      /* 文字行间距 */
+                                                /* 文字溢出部分截断 */
+                                                display: -webkit-box;
+                                                overflow: hidden;
+                                                -webkit-line-clamp: 2;
+                                                -webkit-box-orient: vertical;
+                                                color: rgba(255, 255, 255, 0.9);
+                                            }
+                                            p{
+                                                color: rgba(0, 0, 0, 0.5);
+                                                /* 文字溢出部分截断 */
+                                                display: -webkit-box;
+                                                overflow: hidden;
+                                                -webkit-line-clamp: 2;
+                                                -webkit-box-orient: vertical;
+                                                color: rgba(255, 255, 255, 0.4);
+                                            }
+                                        }
+                                        .abstractBox{
+                                            /* width: auto; */
+                                            display: flex;
+                                            justify-content: space-between;
+                                            .left{
+                                                display: flex;
+                                                column-gap: 16px;
+                                                align-items: center;        /* 内容垂直居中 */
+                                                .date{
+                                                    display: flex;
+                                                    column-gap: 8px;
+                                                    justify-content: center;    /* 内容水平居中 */
+                                                    align-items: center;        /* 内容垂直居中 */
+                                                    color: rgba(255, 255, 255, 0.7);
+                                                }
+                                                .readingtime{
+                                                    display: flex;
+                                                    column-gap: 8px;
+                                                    justify-content: center;    /* 内容水平居中 */
+                                                    align-items: center;        /* 内容垂直居中 */
+                                                    color: rgba(255, 255, 255, 0.7);
+                                                }
+                                            }
+                                            .right{
+                                                display: flex;
+                                                column-gap: 16px;
+                                                .category{
+                                                    font-size: 10px;
+                                                    color: rgb(255, 255, 255);
+                                                    background: rgba(255, 255, 255, 0.1);
+                                                    border: 0.5px solid rgba(255, 255, 255, 0.2);
+                                                    padding: 4px 8px;
+                                                    border-radius: 4px;         /* 圆角 */
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .card:hover{
+                                    transition-duration: 0.25s;
+                                    transform: scale(1.005);
+                                    transition-timing-function: linear;
+                                    border: 2px solid rgb(85, 86, 99);
+                                }
+                                .card:hover #img{
+                                    transform: scale(1.05);
+                                }
+                            }
+                            .view{
+                                display: flex;
+                                justify-content: flex-end;
+                                a{
+                                    color: rgba(255, 255, 255, 0.9);
+                                    h5{
+                                        margin: 0px;
+                                    }
+                                }
+                            }
+                        }
+                        .emptyPosts {
+                            height: 64px;
+                            display: flex;
+                            justify-content: center;    /* 内容水平居中 */
+                            align-items: center;        /* 内容垂直居中 */
+                            p {
+                                color: rgba(255, 255, 255, 0.6);
+                            }
+                        }
+                    }
+                    .topicsCard{
+                        display: flex;
+                        flex-direction: column;    /* 主轴方向：垂直 */
+                        gap: 20px 20px;
+                        h2 {
+                            color: rgba(255, 255, 255, 0.9);
+                        }
+                        .topics{
+                            display: grid;
+                            grid-gap: 20px;
+                            grid-template-columns: 1fr 1fr;
+                            a{
+                                color: #000;
+                                .card{
+                                    display: flex;
+                                    gap: 10px 10px;
+                                    width: 100%;
+                                    height: 180px;
+                                    background: rgb(39, 40, 46);                        /* 背景 */
+                                    border: 2px solid rgb(58, 59, 68);
+                                    border-radius: 8px;                           /* 圆角 */
+                                    transition: all 1s linear;
+                                    position: relative;
+                                    .imgBox{
+                                        height: 100%;
+                                        width: 100%;
+                                        border-radius: 8px;                           /* 圆角 */
+                                        overflow: hidden;
+                                        .img{
+                                            width: 0;
+                                            height: 100%;
+                                            padding-right: 100%;     /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+                                            position: relative;
+                                            overflow: hidden;
+                                            border-radius: 8px;                           /* 圆角 */
+                                            /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+                                            background-position: center center;
+                                            background-repeat: no-repeat;
+                                            -webkit-background-size: cover;
+                                            -moz-background-size: cover;
+                                            background-size: cover;
+                                            transition-duration: 0.25s;
+                                            .mask{
+                                                background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+                                                height: 100%;
+                                                width: 100%;
+                                                position: absolute;
+                                                z-index: 1;
+                                            }
+                                        }
+                                    }
+                                    .detailBox{
+                                        position: absolute;
+                                        z-index: 2;
+                                        margin: 20px;
+                                        padding: 0px;
+                                        bottom: 0;
+                                        color: rgb(255, 255, 255);
+                                        .title{
+                                            font-size: 18px;
+                                            margin: 4px 0px;
+                                            h3{
+                                                margin: 0px 0px;
+                                            }
+                                        }
+                                        .description{
+                                            font-size: 10px;
+                                            font-weight: 350;
+                                            margin: 4px 0px;
+                                        }
+                                    }
+                                }
+                                .card:hover{
+                                    transition-duration: 0.25s;
+                                    transform: scale(1.005);
+                                    transition-timing-function: linear;
+                                    border: 2px solid rgb(85, 86, 99);
+                                }
+                                .card:hover #img{
+                                    transform: scale(1.05);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px){
+    .sitebar {
+        height: 0px;
+        /* 定位 */
+        position: sticky;
+        /* top: 0px; */
+        z-index: 999;
+        .container {
+            height: 100px;
+            /* background: rgba(0, 0, 0, 0.15); */
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6), transparent);
+            width: 100%;
+            box-shadow: 5px 5px 10px rgba(163, 163, 163, 0.0);
+            /* 布局 */
+            display: flex;              /* flex 布局 */
+            justify-content: center;    /* 内容水平居中 */
+            align-items: center;        /* 内容垂直居中 */
+            .wrap {
+                width: 85%;
+                display: flex;                      /* flex 布局 */
+                justify-content: space-between;     /* 两端对齐 */
+                .left {
+                    display: flex;          /* flex 布局 */
+                    align-items: center;    /* 内容垂直居中 */
+                    a{
+                        color: rgb(255, 255, 255);
+                        text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.7);
+                    }
+                    .siteLogo{
+                        height: 100%;
+                        display: flex;          /* flex 布局 */
+                        align-items: center;    /* 内容垂直居中 */
+                        img {
+                            width: 25px;
+                            height: 25px;
+                            border: 2px solid rgba(255, 255, 255, 1);
+                            border-radius: 50%
+                        }
+                    }
+                    .siteName {
+                        height: 100%;
+                        display: flex;          /* flex 布局 */
+                        align-items: center;    /* 内容垂直居中 */
+                        h3 {
+                            font-size: 16px;
+                            padding:0px 0px 0px 16px;
+                        }
+                    }
+                }
+                .right {
+                    display: flex;          /* flex 布局 */
+                    align-items: center;    /* 内容垂直居中 */
+                    column-gap: 20px;
+                    a {
+                        height: 100%;
+                        display: flex;          /* flex 布局 */
+                        align-items: center;    /* 内容垂直居中 */
+                    }
+                }
+            }
+        }
+    }
+
+    .banner {
+        .container {
+            width: 100%;
+            /* 布局 */
+            display: flex;              /* flex 布局 */
+            justify-content: center;    /* 内容水平居中 */
+            align-items: center;        /* 内容垂直居中 */
+            flex-direction: column;    /* 主轴方向：垂直 */
+            .wrap{
+                width: 100%;
+                background: $undertone;
+                .header{
+                    /* width: 100%; */
+                    /* height: 500px; */
+                    background: $undertone;
+                    position: relative;
+                    .imgBox {
+                        width: 100%;
+                        height: 0px;
+                        padding-bottom: 80%;     /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+                        position: relative;
+                        overflow: hidden;
+                        /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        background-size: cover;
+                        .mask{
+                            background-image: linear-gradient(to top, $undertone, $undertone-transparent, transparent);
+                            height: 100%;
+                            width: 100%;
+                            position: absolute;
+                            z-index: 1;
+                        }
+                    }
+                    .msgBox {
+                        position: absolute;
+                        left: 50%;
+                        top: 45%;
+                        transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
+                        /* bottom: 25%; */
+                        z-index: 2;
+                        /* margin: 60px */
+                        .slogan{
+                            margin: 10px 0px;
+                            display: flex;
+                            justify-content: center;    /* 内容水平居中 */
+                            align-items: center;        /* 内容垂直居中 */
+                            flex-direction: column;    /* 主轴方向：垂直 */
+                            text-align: center;
+                            h3{
+                                font-size: 4vw;
+                                text-shadow: 0px 8px 32px rgba(0, 0, 0, 1);
+                                color: rgb(255, 255, 255);
+                                margin: 2.5vw 0px;
+                                line-height: 40px;
+                            }
+                            p{
+                                font-size: 1vw;
+                                text-shadow: 0px 4px 16px rgba(0, 0, 0, 1);
+                                color: rgb(255, 255, 255);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        padding: 10px 0px;
+        .container {
+            width: 100%;
+            /* 布局 */
+            display: flex;              /* flex 布局 */
+            justify-content: center;    /* 内容水平居中 */
+            align-items: center;        /* 内容垂直居中 */
+            .wrap {
+                width: 100%;
+                max-width: 2048px;
+                background: $undertone;
+                display: flex;
+                justify-content: center;    /* 内容水平居中 */
+                gap: 20px 20px;
+                /* box-sizing:border-box;  让元素变成一个模型框,使得 padding 生效 */
+                margin: 20px auto;
+                .wrap-left{
+                    width: 20%;
+                    height: 50%;
+                    background: $undertone;
+                    display: flex;
+                    display: none;
+                    flex-direction: column;    /* 主轴方向：垂直 */
+                    gap: 20px 20px;
+                    position: sticky;
+                    top: 20px;
+                    z-index: 997;
+                    .dataCard{
+                        width: 100%;
+                        /* height: 600px; */
+                        background: rgb(39, 40, 46);                        /* 背景 */
+                        border: 2px solid rgb(58, 59, 68);
+                        border-radius: 8px;                           /* 圆角 */
+                        display: flex;
+                        flex-direction: column;    /* 主轴方向：垂直 */
+                        .statistics{
+                            display: flex;
+                            justify-content: space-between;     /* 两端对齐*/
+                            padding: 25px 25px 10px 25px;
+                            .item {
+                                display: flex;
+                                flex-direction: column;    /* 主轴方向：垂直 */
+                                .data{
+                                    font-size: 28px;
+                                    font-weight: 700;
+                                    color: rgba(255, 255, 255, 0.9);
+                                }
+                                .name{
+                                    font-size: 10px;
+                                    color: rgba(255, 255, 255, 0.6);
+                                }
+                            }
+                        }
+                        .hotmap {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;    /* 内容水平居中 */
+                            .background {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;    /* 主轴方向：垂直 */
+                                justify-content: center;    /* 内容水平居中 */
+                                align-items: center;        /* 内容垂直居中 */
+                                padding: 10px 25px 10px 25px;
+                                .pointsBar {
+                                    /* position: relative; */
+                                    width: 100%;
+                                    display: grid;
+                                    grid-auto-flow: column;  /*表示先列后行*/
+                                    place-content: start;    /*从起始点开始放置子盒子*/
+                                    grid-template-columns: repeat(12,1fr);
+                                    grid-template-rows: repeat(7,1fr);
+                                    grid-gap: 4px;
+                                    align-content: center;
+                                    align-items: center;
+                                    /* z-index: 998; */
+                                    .point{
+                                        width: 100%;
+                                        height: 0;
+                                        padding-bottom:100%;
+                                        border: 1px solid rgb(58, 59, 68, 0);
+                                        box-sizing: border-box;
+                                        border-radius: 25%;                           /* 圆角 */
+                                    }
+                                    .point-hover{
+                                        // cursor: pointer;
+                                        border: 1px solid rgb(128, 129, 148) !important;
+                                    }
+                                    /* 悬浮窗 */
+                                    .point-popup {
+                                        border-radius: 5px;
+                                        text-align: center;
+                                        padding: 5px;
+                                        box-sizing: border-box;
+                                        position: absolute;
+                                        width: 145px;
+                                        height: 30px;
+                                        border: 0;
+                                        font-size: 12px;
+                                        color: rgba(255, 255, 255, 0.8);
+                                        background-color: #27282e;
+                                        border: 1px solid rgb(128, 129, 148) !important;
+                                        box-shadow: 0 0 6px -1px rgb(140 146 163 / 50%);
+                                        z-index: 999;
+                                        div {
+                                            width: 100%;
+                                            height: 100%;
+                                            box-sizing: border-box;
+                                            display: flex;
+                                            align-content: center;
+                                            align-items: center;
+                                            justify-content: center;
+                                        }
+                                    }
+                                    .open-point-popup {
+                                        display: block;
+                                        animation: OpenPopupAnimation 0.2s ease;
+                                    }
+                                    .close-point-popup {
+                                        display: none;
+                                    }
+                                    /* 贡献点样式 */
+                                    .a-type-point {
+                                        background-color: #0e4429 !important;
+                                    }
+                                    .b-type-point {
+                                        background-color: #208b37 !important;
+                                    }
+                                    .c-type-point {
+                                        background-color: #39d353 !important;
+                                    }
+                                    .d-type-point {
+                                        background-color: #474954 !important;
+                                    }
+                                }
+                                .monthsBar {
+                                    width: 100%;
+                                    height: 50px;
+                                    font-size: 12px;
+                                    display: flex;
+                                    color: rgba(255, 255, 255, 0.5);
+                                    flex-direction: row;
+                                    flex-wrap: nowrap;
+                                    align-content: center;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                }
+                            }
+                        }
+                    }
+                }
+                .wrap-right{
+                    width: 90%;
+                    background: $undertone;
+                    display: flex;
+                    flex-direction: column;    /* 主轴方向：垂直 */
+                    gap: 40px 40px;
+                    .postsCard{
+                        display: flex;
+                        flex-direction: column;    /* 主轴方向：垂直 */
+                        gap: 20px 20px;
+                        h2 {
+                            color: rgba(255, 255, 255, 0.9);
+                        }
+                        .posts{
+                            display: flex;
+                            flex-direction: column;    /* 主轴方向：垂直 */
+                            gap: 24px 24px;
+                            a {
+                                color: #000000;
+                                .card{
+                                    display: flex;
+                                    gap: 20px 20px;
+                                    height: auto;
+                                    background: rgb(39, 40, 46);                        /* 背景 */
+                                    flex-direction: column;                                /* 主轴方向：垂直 */
+                                    border: 2px solid rgb(58, 59, 68);
+                                    border-radius: 8px;                           /* 圆角 */
+                                    transition: all 1s linear;
+                                    padding: 20px;
+                                    .imgBox{
+                                        height: 100%;
+                                        width: 100%;
+                                        border-radius: 6px;                           /* 圆角 */
+                                        overflow: hidden;
+                                        .img{
+                                            width: 100%;
+                                            height: 100%;
+                                            padding-bottom: 40%;     /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+                                            position: relative;
+                                            overflow: hidden;
+                                            border-radius: 6px;                           /* 圆角 */
+                                            /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+                                            background-position: center center;
+                                            background-repeat: no-repeat;
+                                            -webkit-background-size: cover;
+                                            -moz-background-size: cover;
+                                            background-size: cover;
+                                            transition-duration: 0.25s;
+                                            z-index: 1;
+                                        }
+                                    }
+                                    .detailBox{
+                                        width: 100%;
+                                        display: flex;
+                                        flex-direction: column;    /* 主轴方向：垂直 */
+                                        justify-content: space-between;     /* 两端对齐，垂直方向*/
+                                        gap: 20px 20px;
+                                        padding: 8px;
+                                        padding: 0px;
+                                        .title{
+                                            display: flex;
+                                            flex-direction: column;    /* 主轴方向：垂直 */
+                                            justify-content: space-between;     /* 两端对齐，垂直方向*/
+                                            gap: 10px 20px;
+                                            h3{
+                                                margin: 0px;
+                                                line-height: 25px;      /* 文字行间距 */
+                                                /* 文字溢出部分截断 */
+                                                display: -webkit-box;
+                                                overflow: hidden;
+                                                -webkit-line-clamp: 2;
+                                                -webkit-box-orient: vertical;
+                                                color: rgba(255, 255, 255, 0.9);
+                                            }
+                                            p{
+                                                color: rgba(0, 0, 0, 0.5);
+                                                /* 文字溢出部分截断 */
+                                                display: -webkit-box;
+                                                display: none;
+                                                overflow: hidden;
+                                                -webkit-line-clamp: 2;
+                                                -webkit-box-orient: vertical;
+                                                color: rgba(255, 255, 255, 0.4);
+                                            }
+                                        }
+                                        .abstractBox{
+                                            /* width: auto; */
+                                            display: flex;
+                                            justify-content: space-between;
+                                            .left{
+                                                display: flex;
+                                                column-gap: 16px;
+                                                align-items: center;        /* 内容垂直居中 */
+                                                .date{
+                                                    display: flex;
+                                                    column-gap: 8px;
+                                                    justify-content: center;    /* 内容水平居中 */
+                                                    align-items: center;        /* 内容垂直居中 */
+                                                    color: rgba(255, 255, 255, 0.7);
+                                                }
+                                                .readingtime{
+                                                    display: flex;
+                                                    column-gap: 8px;
+                                                    justify-content: center;    /* 内容水平居中 */
+                                                    align-items: center;        /* 内容垂直居中 */
+                                                    color: rgba(255, 255, 255, 0.7);
+                                                }
+                                            }
+                                            .right{
+                                                display: flex;
+                                                column-gap: 16px;
+                                                .category{
+                                                    font-size: 10px;
+                                                    color: rgb(255, 255, 255);
+                                                    background: rgba(255, 255, 255, 0.1);
+                                                    border: 0.5px solid rgba(255, 255, 255, 0.2);
+                                                    padding: 4px 8px;
+                                                    border-radius: 4px;         /* 圆角 */
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .card:hover{
+                                    transition-duration: 0.25s;
+                                    transform: scale(1.005);
+                                    transition-timing-function: linear;
+                                    border: 2px solid rgb(85, 86, 99);
+                                }
+                                .card:hover #img{
+                                    transform: scale(1.05);
+                                }
+                            }
+                            .view{
+                                display: flex;
+                                justify-content: flex-end;
+                                a{
+                                    color: rgba(255, 255, 255, 0.9);
+                                    h5{
+                                        margin: 0px;
+                                    }
+                                }
+                            }
+                        }
+                        .emptyPosts {
+                            height: 64px;
+                            display: flex;
+                            justify-content: center;    /* 内容水平居中 */
+                            align-items: center;        /* 内容垂直居中 */
+                            p {
+                                color: rgba(255, 255, 255, 0.6);
+                            }
+                        }
+                    }
+                    .topicsCard{
+                        display: flex;
+                        flex-direction: column;    /* 主轴方向：垂直 */
+                        gap: 20px 20px;
+                        h2 {
+                            color: rgba(255, 255, 255, 0.9);
+                        }
+                        .topics{
+                            display: grid;
+                            grid-gap: 20px;
+                            grid-template-columns: 1fr;
+                            a{
+                                color: #000;
+                                .card{
+                                    display: flex;
+                                    gap: 10px 10px;
+                                    height: 180px;
+                                    background: rgb(39, 40, 46);                        /* 背景 */
+                                    border: 2px solid rgb(58, 59, 68);
+                                    border-radius: 8px;                           /* 圆角 */
+                                    transition: all 1s linear;
+                                    position: relative;
+                                    .imgBox{
+                                        height: 100%;
+                                        width: 100%;
+                                        border-radius: 8px;                           /* 圆角 */
+                                        overflow: hidden;
+                                        .img{
+                                            width: 0;
+                                            height: 100%;
+                                            padding-right: 100%;     /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+                                            position: relative;
+                                            overflow: hidden;
+                                            border-radius: 8px;                           /* 圆角 */
+                                            /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+                                            background-position: center center;
+                                            background-repeat: no-repeat;
+                                            -webkit-background-size: cover;
+                                            -moz-background-size: cover;
+                                            background-size: cover;
+                                            transition-duration: 0.25s;
+                                            .mask{
+                                                background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+                                                height: 100%;
+                                                width: 100%;
+                                                position: absolute;
+                                                z-index: 1;
+                                            }
+                                        }
+                                    }
+                                    .detailBox{
+                                        position: absolute;
+                                        z-index: 2;
+                                        margin: 20px;
+                                        padding: 0px;
+                                        bottom: 0;
+                                        color: rgb(255, 255, 255);
+                                        .title{
+                                            font-size: 18px;
+                                            margin: 4px 0px;
+                                            h3{
+                                                margin: 0px 0px;
+                                            }
+                                        }
+                                        .description{
+                                            font-size: 10px;
+                                            font-weight: 350;
+                                            margin: 4px 0px;
+                                        }
+                                    }
+                                }
+                                .card:hover{
+                                    transition-duration: 0.25s;
+                                    transform: scale(1.005);
+                                    transition-timing-function: linear;
+                                    border: 2px solid rgb(85, 86, 99);
+                                }
+                                .card:hover #img{
+                                    transform: scale(1.05);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

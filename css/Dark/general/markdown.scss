@@ -1,0 +1,250 @@
+$heading-color: rgba(255, 255, 255, 0.9);
+
+.article {
+    h1 {
+        font-size: 2.2em;
+        color: $heading-color;
+        font-weight: 700;
+        line-height: 1.5;
+        margin: 20px 0 15px;
+    }
+    h2 {
+        font-size: 2.0em;
+        color: $heading-color;
+        font-weight: 700;
+        line-height: 1.5;
+        margin: 20px 0 15px;
+    }
+    h3 {
+        font-size: 1.8em;
+        color: $heading-color;
+        font-weight: 700;
+        line-height: 1.5;
+        margin: 20px 0 15px;
+    }
+    h4 {
+        font-size: 1.6em;
+        color: $heading-color;
+        font-weight: 700;
+        line-height: 1.5;
+        margin: 20px 0 15px;
+    }
+    h5 {
+        font-size: 1.4em;
+        color: $heading-color;
+        font-weight: 700;
+        line-height: 1.5;
+        margin: 20px 0 15px;
+    }
+    h6 {
+        font-size: 1.2em;
+        color: $heading-color;
+        font-weight: 700;
+        line-height: 1.5;
+        margin: 20px 0 15px;
+    }
+
+    p {
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.7rem;
+        margin: 0 0 16px;
+        font-family: "Hiragino Sans GB";
+        a {
+            color: #09b27d;
+            text-decoration: none;
+            transition-duration: 0.25s;
+        }
+        a:hover {
+            color: #09b27d;
+            border-bottom: 1.75px solid #09b27d;
+        }
+        /* 行代码 */
+        code {
+            font-weight: 550;
+            font-size: 1em;
+            padding: 2px 4px;
+            color: #09b27d;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+    }
+
+    ul {
+        display: flex;
+        row-gap: 8px;
+        flex-direction: column;    /* 主轴方向：垂直 */
+        margin: 8px 0px;
+        padding: 0px 0px 0px 18px;
+        /* 无序列表 */
+        li {
+            list-style-type: disc;
+            color: rgba(255, 255, 255, 0.6);
+            p {
+                margin: 0;
+                color: rgba(255, 255, 255, 0.6);
+            }
+            /* 复选框 */
+            input {
+                -webkit-appearance:none;  /*去除复选框的默认样式*/
+                -moz-appearance:none;
+                outline: none;              /*去除默认外边框*/
+                width: 1.5em;
+                height: 1.5em;
+                border:solid 2px #cdcdcd;
+                background-color: #09b27d00;
+                border-radius:50%;
+                position:relative;
+                /*文字对齐方式，垂直居中*/
+                display:inline-block;
+                text-align:center;  /*水平居中*/
+                transition:background-color ease 0.1s;
+            }
+            input:checked {
+                -webkit-appearance:none;
+                -moz-appearance:none;
+                outline: none;
+                width: 1.5em;
+                height: 1.5em;
+                border:solid 2px #09b27d;
+                background-color: #09b27d;
+                border-radius:50%;
+                position:relative;
+                /*文字对齐方式，垂直居中*/
+                display:inline-block;
+                text-align:center;  /*水平居中*/
+                transition:background-color ease 0.1s;
+            }
+            input:checked::before {
+                content: '✓';
+                color:rgb(255, 255, 255);
+                font-size: 0.6rem;
+                line-height: 0.2rem;
+            }
+        }
+        li::marker {
+            padding-left: 15px;
+        }
+        li[style="list-style-type: none;"] {
+            display: flex;
+            align-items: center;
+            column-gap: 6px;
+        }
+    }
+    /* 有序列表 */
+    ol {
+        margin: 8px 0px;
+        padding: 0px 0px 0px 18px;
+        display: flex;
+        row-gap: 8px;
+        flex-direction: column;    /* 主轴方向：垂直 */
+        li{
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+    /* 引用 */
+    blockquote {
+        display:block;
+        padding: 0px 0px 0px 18px;
+        margin: 8px 0px;
+        position: relative;
+        color: rgba(255, 255, 255, 0.6);
+        border-left: 4px solid rgba(255, 255, 255, 0.7);
+        p {
+            margin: 0px 0px;
+            padding: 3px 0px;
+        }
+    }
+    /* 分隔符 */
+    hr {
+        border: 0;
+        margin: 18px 0px;
+        background: rgba(255, 255, 255, 0.6);
+        border: 0;
+        /* 兼容 Firefox */
+        height: 1px;
+    }
+    /* 表格 */
+    table {
+        width: 100%;
+        border-top: 1.8px solid rgba(255, 255, 255, 0.2);
+        border-left: 1.8px solid rgba(255, 255, 255, 0.2);
+        border-spacing: 0px;    /* 去掉单元格之间的间隙 */
+        white-space: nowrap;   /*强制不换行*/
+        text-align: left;
+        thead > tr > th {
+            color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            border-right: 1.8px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        tbody > tr > td {
+            color: rgba(255, 255, 255, 0.6);
+            padding: 10px;
+            border-bottom: 1.8px solid rgba(255, 255, 255, 0.2);
+            border-right: 1.8px solid rgba(255, 255, 255, 0.2);
+        }
+    }
+    /*图片*/
+    img {
+        width: 100%;
+        border-radius: 8px;
+    }
+    /*代码块*/
+    .highlight {
+        position: relative;
+        border-style: solid;
+        /* 边框宽度、圆角、颜色 */
+        border-width: 1px;
+        border-radius: 6px;
+        border-color: rgba(255, 255, 255, 0.3);
+        div {
+            border-radius: 6px;
+            overflow-x: auto;              /* 代码框横向超出截断，并显示滚动条 */
+            padding: 16px;
+            /* 解决 span 过长导致代码块溢出问题 */
+            table {
+                tbody {
+                    tr {
+                        td:nth-child(1) {
+                            pre {
+                                code > span {
+                                    margin: 0px;
+                                    // background-color:#f8f8f8 !important;
+                                }
+                            }
+                        }
+                        td:nth-child(2) {
+                            pre {
+                                padding-left: 8px;
+                                code > span {
+                                    margin: 0px;
+                                    width: 0px;
+                                    /* background-color:#f8f8f8 !important; */
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* 代码复制按钮，搭配 copy-code.js 使用 */
+    .highlight-copy-btn {
+        position: absolute;
+        top: 7px;
+        right: 7px;
+        border: 0;
+        border-radius: 4px;
+        padding: 1px;
+        font-size: 0.8em;
+        line-height: 1.8;
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.2);
+        min-width: 55px;
+        text-align: center;
+    }
+    .highlight-copy-btn:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+}

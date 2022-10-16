@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* -------------------- 导航栏 -------------------- */
+.navbar {
+  height: 0px;
+  position: sticky; /* 定位 */
+  /* top: 0px; */
+  z-index: 999;
+}
+.navbar .container {
+  height: 100px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)), color-stop(rgba(0, 0, 0, 0.6)), to(transparent));
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.6), transparent);
+  width: 100%;
+  -webkit-box-shadow: 5px 5px 10px rgba(163, 163, 163, 0);
+          box-shadow: 5px 5px 10px rgba(163, 163, 163, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /* flex 布局 */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; /* 内容水平居中 */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* 内容垂直居中 */
+}
+.navbar .container .wrap {
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /* flex 布局 */
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; /* 两端对齐 */
+}
+.navbar .container .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /* flex 布局 */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* 内容垂直居中 */
+}
+.navbar .container .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /* flex 布局 */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* 内容垂直居中 */
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}

@@ -1,0 +1,448 @@
+@charset "UTF-8";
+@media screen and (min-width: 1024px) {
+  /* -------------------- Banner -------------------- */
+  .banner .container {
+    width: 100%;
+    /* 布局 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .banner .container .wrap {
+    width: 100%;
+    background: rgb(35, 36, 41);
+  }
+  .banner .container .wrap .header {
+    position: relative;
+  }
+  .banner .container .wrap .header .imgBox {
+    width: 100%;
+    height: 0px;
+    padding-bottom: 45%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+    position: relative;
+    overflow: hidden;
+    /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .banner .container .wrap .header .imgBox .mask {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(35, 36, 41)), color-stop(rgba(35, 36, 41, 0.1)), to(transparent));
+    background-image: linear-gradient(to top, rgb(35, 36, 41), rgba(35, 36, 41, 0.1), transparent);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  .banner .container .wrap .header .msgBox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); /* 50%为自身尺寸的一半 */
+    z-index: 2;
+  }
+  .banner .container .wrap .header .msgBox .author {
+    margin: 10px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .banner .container .wrap .header .msgBox .author img {
+    width: 180px;
+    height: 180px;
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 50%;
+  }
+  .banner .container .wrap .header .msgBox .author h3 {
+    font-size: 36px;
+    text-shadow: 0px 8px 32px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    margin: 20px 0px;
+    line-height: 40px;
+  }
+  .banner .container .wrap .header .msgBox .author p {
+    font-size: 12px;
+    text-shadow: 0px 4px 16px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+  .banner .container .wrap .header .msgBox .social {
+    margin: 20px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-column-gap: 6px;
+       -moz-column-gap: 6px;
+            column-gap: 6px;
+  }
+  /* --------------------内容-------------------- */
+  .content {
+    padding: 0px 0px;
+  }
+  .content .container {
+    width: 100%;
+    /* 布局 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .content .container .wrap {
+    width: 70%;
+    max-width: 2048px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    gap: 20px 20px;
+    margin: 60px auto 60px auto;
+  }
+  .content .container .wrap .articleCard {
+    width: 100%;
+    height: auto;
+    display: grid;
+    background: rgb(39, 40, 46); /* 背景 */
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 12px; /* 圆角 */
+    border-color: rgb(58, 59, 68);
+    padding: 40px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  /* -------------------- Banner -------------------- */
+  .banner .container {
+    width: 100%;
+    /* 布局 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .banner .container .wrap {
+    width: 100%;
+    background: rgb(35, 36, 41);
+  }
+  .banner .container .wrap .header {
+    position: relative;
+  }
+  .banner .container .wrap .header .imgBox {
+    width: 100%;
+    height: 0px;
+    padding-bottom: 60%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+    position: relative;
+    overflow: hidden;
+    /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .banner .container .wrap .header .imgBox .mask {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(35, 36, 41)), color-stop(rgba(35, 36, 41, 0.1)), to(transparent));
+    background-image: linear-gradient(to top, rgb(35, 36, 41), rgba(35, 36, 41, 0.1), transparent);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  .banner .container .wrap .header .msgBox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); /* 50%为自身尺寸的一半 */
+    z-index: 2;
+  }
+  .banner .container .wrap .header .msgBox .author {
+    margin: 10px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .banner .container .wrap .header .msgBox .author img {
+    width: 100px;
+    height: 100px;
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 50%;
+  }
+  .banner .container .wrap .header .msgBox .author h3 {
+    font-size: 36px;
+    text-shadow: 0px 8px 32px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    margin: 20px 0px;
+    line-height: 40px;
+  }
+  .banner .container .wrap .header .msgBox .author p {
+    font-size: 12px;
+    text-shadow: 0px 4px 16px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+  .banner .container .wrap .header .msgBox .social {
+    margin: 20px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-column-gap: 6px;
+       -moz-column-gap: 6px;
+            column-gap: 6px;
+  }
+  /* --------------------内容-------------------- */
+  .content {
+    padding: 0px 0px;
+  }
+  .content .container {
+    width: 100%;
+    /* 布局 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .content .container .wrap {
+    width: 80%;
+    max-width: 2048px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    gap: 20px 20px;
+    margin: 40px auto 40px auto;
+  }
+  .content .container .wrap .articleCard {
+    width: 100%;
+    height: auto;
+    display: grid;
+    background: rgb(39, 40, 46); /* 背景 */
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 12px; /* 圆角 */
+    border-color: rgb(58, 59, 68);
+    padding: 35px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  /* -------------------- Banner -------------------- */
+  .banner .container {
+    width: 100%;
+    /* 布局 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .banner .container .wrap {
+    width: 100%;
+    background: rgb(35, 36, 41);
+  }
+  .banner .container .wrap .header {
+    position: relative;
+  }
+  .banner .container .wrap .header .imgBox {
+    width: 100%;
+    height: 0px;
+    padding-bottom: 80%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+    position: relative;
+    overflow: hidden;
+    /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .banner .container .wrap .header .imgBox .mask {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(35, 36, 41)), color-stop(rgba(35, 36, 41, 0.1)), to(transparent));
+    background-image: linear-gradient(to top, rgb(35, 36, 41), rgba(35, 36, 41, 0.1), transparent);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  .banner .container .wrap .header .msgBox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); /* 50%为自身尺寸的一半 */
+    z-index: 2;
+  }
+  .banner .container .wrap .header .msgBox .author {
+    margin: 10px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+    text-align: center; /* 文字水平居中 */
+  }
+  .banner .container .wrap .header .msgBox .author img {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 50%;
+  }
+  .banner .container .wrap .header .msgBox .author h3 {
+    font-size: 36px;
+    text-shadow: 0px 8px 32px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    margin: 20px 0px;
+    line-height: 40px;
+  }
+  .banner .container .wrap .header .msgBox .author p {
+    font-size: 12px;
+    text-shadow: 0px 4px 16px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+  .banner .container .wrap .header .msgBox .social {
+    margin: 20px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-column-gap: 6px;
+       -moz-column-gap: 6px;
+            column-gap: 6px;
+  }
+  /* --------------------内容-------------------- */
+  .content {
+    padding: 0px 0px;
+  }
+  .content .container {
+    width: 100%;
+    /* 布局 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* flex 布局 */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 主轴方向：垂直 */
+  }
+  .content .container .wrap {
+    width: 95%;
+    max-width: 2048px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* 内容水平居中 */
+    margin: 20px auto 20px auto;
+  }
+  .content .container .wrap .articleCard {
+    width: 100%;
+    height: auto;
+    display: grid;
+    background: rgb(39, 40, 46); /* 背景 */
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 12px; /* 圆角 */
+    border-color: rgb(58, 59, 68);
+    padding: 30px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
