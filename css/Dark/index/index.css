@@ -44,6 +44,7 @@
             align-items: center; /* 内容垂直居中 */
   }
   .sitebar .container .wrap .left a {
+    text-decoration: none; /* 取消下划线 */
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.7);
   }
@@ -146,6 +147,7 @@
   }
   .banner .container .wrap .header .msgBox {
     position: absolute;
+    width: 100%;
     left: 50%;
     top: 45%;
     -webkit-transform: translate(-50%, -50%);
@@ -155,7 +157,7 @@
     /* margin: 60px */
   }
   .banner .container .wrap .header .msgBox .slogan {
-    margin: 10px 0px;
+    margin: 0px 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -172,14 +174,14 @@
     text-align: center;
   }
   .banner .container .wrap .header .msgBox .slogan h3 {
-    font-size: 3vw;
+    font-size: 48px;
     text-shadow: 0px 8px 32px rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     margin: 2.5vw 0px;
     line-height: 40px;
   }
-  .banner .container .wrap .header .msgBox .slogan p {
-    font-size: 1vw;
+  .banner .container .wrap .header .msgBox .slogan h6 {
+    font-size: 24px;
     text-shadow: 0px 4px 16px rgb(0, 0, 0);
     color: rgb(255, 255, 255);
   }
@@ -770,6 +772,7 @@
             align-items: center; /* 内容垂直居中 */
   }
   .sitebar .container .wrap .left a {
+    text-decoration: none; /* 取消下划线 */
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.7);
   }
@@ -851,7 +854,7 @@
   .banner .container .wrap .header .imgBox {
     width: 100%;
     height: 0px;
-    padding-bottom: 60%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+    padding-bottom: 45%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
     position: relative;
     overflow: hidden;
     /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
@@ -869,6 +872,7 @@
   }
   .banner .container .wrap .header .msgBox {
     position: absolute;
+    width: 100%;
     left: 50%;
     top: 45%;
     -webkit-transform: translate(-50%, -50%);
@@ -878,7 +882,7 @@
     /* margin: 60px */
   }
   .banner .container .wrap .header .msgBox .slogan {
-    margin: 10px 0px;
+    margin: 0px 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -895,14 +899,14 @@
     text-align: center;
   }
   .banner .container .wrap .header .msgBox .slogan h3 {
-    font-size: 3vw;
+    font-size: 32px;
     text-shadow: 0px 8px 32px rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     margin: 2.5vw 0px;
     line-height: 40px;
   }
-  .banner .container .wrap .header .msgBox .slogan p {
-    font-size: 1vw;
+  .banner .container .wrap .header .msgBox .slogan h6 {
+    font-size: 16px;
     text-shadow: 0px 4px 16px rgb(0, 0, 0);
     color: rgb(255, 255, 255);
   }
@@ -1497,6 +1501,7 @@
             align-items: center; /* 内容垂直居中 */
   }
   .sitebar .container .wrap .left a {
+    text-decoration: none; /* 取消下划线 */
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.7);
   }
@@ -1578,7 +1583,7 @@
   .banner .container .wrap .header .imgBox {
     width: 100%;
     height: 0px;
-    padding-bottom: 80%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+    padding-bottom: 120%; /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
     position: relative;
     overflow: hidden;
     /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
@@ -1596,6 +1601,7 @@
   }
   .banner .container .wrap .header .msgBox {
     position: absolute;
+    width: 100%;
     left: 50%;
     top: 45%;
     -webkit-transform: translate(-50%, -50%);
@@ -1605,7 +1611,7 @@
     /* margin: 60px */
   }
   .banner .container .wrap .header .msgBox .slogan {
-    margin: 10px 0px;
+    margin: 0px 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1622,14 +1628,14 @@
     text-align: center;
   }
   .banner .container .wrap .header .msgBox .slogan h3 {
-    font-size: 4vw;
+    font-size: 24px;
     text-shadow: 0px 8px 32px rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     margin: 2.5vw 0px;
     line-height: 40px;
   }
-  .banner .container .wrap .header .msgBox .slogan p {
-    font-size: 1vw;
+  .banner .container .wrap .header .msgBox .slogan h6 {
+    font-size: 12px;
     text-shadow: 0px 4px 16px rgb(0, 0, 0);
     color: rgb(255, 255, 255);
   }

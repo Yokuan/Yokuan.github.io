@@ -26,6 +26,7 @@ $undertone-transparent: rgba(35, 36, 41, 0.1);
                     display: flex;          /* flex 布局 */
                     align-items: center;    /* 内容垂直居中 */
                     a{
+                        text-decoration: none;  /* 取消下划线 */
                         color: rgb(255, 255, 255);
                         text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.7);
                     }
@@ -103,6 +104,7 @@ $undertone-transparent: rgba(35, 36, 41, 0.1);
                     }
                     .msgBox {
                         position: absolute;
+                        width: 100%;
                         left: 50%;
                         top: 45%;
                         transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
@@ -110,21 +112,21 @@ $undertone-transparent: rgba(35, 36, 41, 0.1);
                         z-index: 2;
                         /* margin: 60px */
                         .slogan{
-                            margin: 10px 0px;
+                            margin: 0px 0px;
                             display: flex;
                             justify-content: center;    /* 内容水平居中 */
                             align-items: center;        /* 内容垂直居中 */
                             flex-direction: column;    /* 主轴方向：垂直 */
                             text-align: center;
                             h3{
-                                font-size: 3vw;
+                                font-size: 48px;
                                 text-shadow: 0px 8px 32px rgba(0, 0, 0, 1);
                                 color: rgb(255, 255, 255);
                                 margin: 2.5vw 0px;
                                 line-height: 40px;
                             }
-                            p{
-                                font-size: 1vw;
+                            h6{
+                                font-size: 24px;
                                 text-shadow: 0px 4px 16px rgba(0, 0, 0, 1);
                                 color: rgb(255, 255, 255);
                             }
@@ -552,6 +554,7 @@ $undertone-transparent: rgba(35, 36, 41, 0.1);
                     display: flex;          /* flex 布局 */
                     align-items: center;    /* 内容垂直居中 */
                     a{
+                        text-decoration: none;  /* 取消下划线 */
                         color: rgb(255, 255, 255);
                         text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.7);
                     }
@@ -609,7 +612,7 @@ $undertone-transparent: rgba(35, 36, 41, 0.1);
                     .imgBox {
                         width: 100%;
                         height: 0px;
-                        padding-bottom: 60%;     /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+                        padding-bottom: 45%;     /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
                         position: relative;
                         overflow: hidden;
                         /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
@@ -628,6 +631,7 @@ $undertone-transparent: rgba(35, 36, 41, 0.1);
                     }
                     .msgBox {
                         position: absolute;
+                        width: 100%;
                         left: 50%;
                         top: 45%;
                         transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
@@ -635,21 +639,21 @@ $undertone-transparent: rgba(35, 36, 41, 0.1);
                         z-index: 2;
                         /* margin: 60px */
                         .slogan{
-                            margin: 10px 0px;
+                            margin: 0px 0px;
                             display: flex;
                             justify-content: center;    /* 内容水平居中 */
                             align-items: center;        /* 内容垂直居中 */
                             flex-direction: column;    /* 主轴方向：垂直 */
                             text-align: center;
                             h3{
-                                font-size: 3vw;
+                                font-size: 32px;
                                 text-shadow: 0px 8px 32px rgba(0, 0, 0, 1);
                                 color: rgb(255, 255, 255);
                                 margin: 2.5vw 0px;
                                 line-height: 40px;
                             }
-                            p{
-                                font-size: 1vw;
+                            h6{
+                                font-size: 16px;
                                 text-shadow: 0px 4px 16px rgba(0, 0, 0, 1);
                                 color: rgb(255, 255, 255);
                             }
@@ -1078,6 +1082,7 @@ $undertone-transparent: rgba(35, 36, 41, 0.1);
                     display: flex;          /* flex 布局 */
                     align-items: center;    /* 内容垂直居中 */
                     a{
+                        text-decoration: none;  /* 取消下划线 */
                         color: rgb(255, 255, 255);
                         text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.7);
                     }
@@ -1135,7 +1140,7 @@ $undertone-transparent: rgba(35, 36, 41, 0.1);
                     .imgBox {
                         width: 100%;
                         height: 0px;
-                        padding-bottom: 80%;     /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
+                        padding-bottom: 120%;     /* 控制比例 16:9 -> 56.25%, 4:3 -> 75%  */
                         position: relative;
                         overflow: hidden;
                         /* 后面 5 句就是利用了 css3 中的 background-size:cover 的特性，把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 */
@@ -1154,6 +1159,7 @@ $undertone-transparent: rgba(35, 36, 41, 0.1);
                     }
                     .msgBox {
                         position: absolute;
+                        width: 100%;
                         left: 50%;
                         top: 45%;
                         transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
@@ -1161,21 +1167,21 @@ $undertone-transparent: rgba(35, 36, 41, 0.1);
                         z-index: 2;
                         /* margin: 60px */
                         .slogan{
-                            margin: 10px 0px;
+                            margin: 0px 0px;
                             display: flex;
                             justify-content: center;    /* 内容水平居中 */
                             align-items: center;        /* 内容垂直居中 */
                             flex-direction: column;    /* 主轴方向：垂直 */
                             text-align: center;
                             h3{
-                                font-size: 4vw;
+                                font-size: 24px;
                                 text-shadow: 0px 8px 32px rgba(0, 0, 0, 1);
                                 color: rgb(255, 255, 255);
                                 margin: 2.5vw 0px;
                                 line-height: 40px;
                             }
-                            p{
-                                font-size: 1vw;
+                            h6{
+                                font-size: 12px;
                                 text-shadow: 0px 4px 16px rgba(0, 0, 0, 1);
                                 color: rgb(255, 255, 255);
                             }
