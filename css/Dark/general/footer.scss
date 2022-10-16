@@ -16,14 +16,16 @@
                 .icp {
                     display: flex;
                     justify-content: center;    /* 内容水平居中 */
+                    align-items: center;        /* 内容垂直居中 */
                     white-space:nowrap;         /* 强制不换行 */
                     a {
+                        text-decoration: none;  /* 取消下划线 */
                         p{
                         padding: 4px 0px;
                         text-align: center;
                         color: rgb(75, 76, 87);
                         transition: all 0.25s linear;
-                        font-size: 1em;
+                        font-size: 14px;
                         }
                         p:hover {
                             color: rgb(117, 119, 134);
@@ -36,15 +38,17 @@
                     align-items: center;        /* 内容垂直居中 */
                     white-space:nowrap;         /* 强制不换行 */
                     a {
+                        text-decoration: none;  /* 取消下划线 */
                         p{
                         padding: 4px 0px;
                         text-align: center;
                         color: rgb(75, 76, 87);
                         transition: all 0.25s linear;
-                        font-size: 1em;
+                        font-size: 14px;
                         }
                         p:hover {
                             color: rgb(117, 119, 134);
+                            font-size: 14px;
                         }
                     }
                     p {
@@ -73,14 +77,16 @@
                 .icp {
                     display: flex;
                     justify-content: center;    /* 内容水平居中 */
+                    align-items: center;        /* 内容垂直居中 */
                     white-space:nowrap;         /* 强制不换行 */
                     a {
+                        text-decoration: none;  /* 取消下划线 */
                         p{
                         padding: 4px 0px;
                         text-align: center;
                         color: rgb(75, 76, 87);
                         transition: all 0.25s linear;
-                        font-size: 0.8em;
+                        font-size: 12px;
                         }
                         p:hover {
                             color: rgb(117, 119, 134);
@@ -90,14 +96,16 @@
                 .copyright {
                     display: flex;
                     justify-content: center;    /* 内容水平居中 */
+                    align-items: center;        /* 内容垂直居中 */
                     white-space:nowrap;         /* 强制不换行 */
                     a {
+                        text-decoration: none;  /* 取消下划线 */
                         p{
                         padding: 4px 0px;
                         text-align: center;
                         color: rgb(75, 76, 87);
                         transition: all 0.25s linear;
-                        font-size: 0.8em;
+                        font-size: 12px;
                         }
                         p:hover {
                             color: rgb(117, 119, 134);
@@ -105,6 +113,7 @@
                     }
                     p {
                         color: rgb(75, 76, 87);
+                        font-size: 12px;
                     }
                 }
             }
@@ -129,6 +138,7 @@
                 .icp {
                     display: flex;
                     justify-content: center;    /* 内容水平居中 */
+                    align-items: center;        /* 内容垂直居中 */
                     white-space:nowrap;         /* 强制不换行 */
                     a {
                         p{
@@ -136,7 +146,7 @@
                         text-align: center;
                         color: rgb(75, 76, 87);
                         transition: all 0.25s linear;
-                        font-size: 0.4em;
+                        font-size: 10px;
                         }
                         p:hover {
                             color: rgb(117, 119, 134);
@@ -146,6 +156,7 @@
                 .copyright {
                     display: flex;
                     justify-content: center;    /* 内容水平居中 */
+                    align-items: center;        /* 内容垂直居中 */
                     white-space:nowrap;         /* 强制不换行 */
                     a {
                         p{
@@ -153,7 +164,7 @@
                         text-align: center;
                         color: rgb(75, 76, 87);
                         transition: all 0.25s linear;
-                        font-size: 0.4em;
+                        font-size: 10px;
                         }
                         p:hover {
                             color: rgb(117, 119, 134);
@@ -161,6 +172,7 @@
                     }
                     p {
                         color: rgb(75, 76, 87);
+                        font-size: 10px;
                     }
                 }
             }

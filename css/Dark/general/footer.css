@@ -32,7 +32,13 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
     white-space: nowrap; /* 强制不换行 */
+  }
+  .footer .container .wrap .icp a {
+    text-decoration: none; /* 取消下划线 */
   }
   .footer .container .wrap .icp a p {
     padding: 4px 0px;
@@ -40,7 +46,7 @@
     color: rgb(75, 76, 87);
     -webkit-transition: all 0.25s linear;
     transition: all 0.25s linear;
-    font-size: 1em;
+    font-size: 14px;
   }
   .footer .container .wrap .icp a p:hover {
     color: rgb(117, 119, 134);
@@ -57,16 +63,20 @@
             align-items: center; /* 内容垂直居中 */
     white-space: nowrap; /* 强制不换行 */
   }
+  .footer .container .wrap .copyright a {
+    text-decoration: none; /* 取消下划线 */
+  }
   .footer .container .wrap .copyright a p {
     padding: 4px 0px;
     text-align: center;
     color: rgb(75, 76, 87);
     -webkit-transition: all 0.25s linear;
     transition: all 0.25s linear;
-    font-size: 1em;
+    font-size: 14px;
   }
   .footer .container .wrap .copyright a p:hover {
     color: rgb(117, 119, 134);
+    font-size: 14px;
   }
   .footer .container .wrap .copyright p {
     color: rgb(75, 76, 87);
@@ -105,7 +115,13 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
     white-space: nowrap; /* 强制不换行 */
+  }
+  .footer .container .wrap .icp a {
+    text-decoration: none; /* 取消下划线 */
   }
   .footer .container .wrap .icp a p {
     padding: 4px 0px;
@@ -113,7 +129,7 @@
     color: rgb(75, 76, 87);
     -webkit-transition: all 0.25s linear;
     transition: all 0.25s linear;
-    font-size: 0.8em;
+    font-size: 12px;
   }
   .footer .container .wrap .icp a p:hover {
     color: rgb(117, 119, 134);
@@ -125,7 +141,13 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
     white-space: nowrap; /* 强制不换行 */
+  }
+  .footer .container .wrap .copyright a {
+    text-decoration: none; /* 取消下划线 */
   }
   .footer .container .wrap .copyright a p {
     padding: 4px 0px;
@@ -133,13 +155,14 @@
     color: rgb(75, 76, 87);
     -webkit-transition: all 0.25s linear;
     transition: all 0.25s linear;
-    font-size: 0.8em;
+    font-size: 12px;
   }
   .footer .container .wrap .copyright a p:hover {
     color: rgb(117, 119, 134);
   }
   .footer .container .wrap .copyright p {
     color: rgb(75, 76, 87);
+    font-size: 12px;
   }
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
@@ -175,6 +198,9 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
     white-space: nowrap; /* 强制不换行 */
   }
   .footer .container .wrap .icp a p {
@@ -183,7 +209,7 @@
     color: rgb(75, 76, 87);
     -webkit-transition: all 0.25s linear;
     transition: all 0.25s linear;
-    font-size: 0.4em;
+    font-size: 10px;
   }
   .footer .container .wrap .icp a p:hover {
     color: rgb(117, 119, 134);
@@ -195,6 +221,9 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; /* 内容水平居中 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* 内容垂直居中 */
     white-space: nowrap; /* 强制不换行 */
   }
   .footer .container .wrap .copyright a p {
@@ -203,12 +232,13 @@
     color: rgb(75, 76, 87);
     -webkit-transition: all 0.25s linear;
     transition: all 0.25s linear;
-    font-size: 0.4em;
+    font-size: 10px;
   }
   .footer .container .wrap .copyright a p:hover {
     color: rgb(117, 119, 134);
   }
   .footer .container .wrap .copyright p {
     color: rgb(75, 76, 87);
+    font-size: 10px;
   }
 }
