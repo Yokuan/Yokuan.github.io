@@ -104,7 +104,7 @@ $undertone-transparent: rgba(35, 36, 41, 0.1);
                     }
                     .msgBox {
                         position: absolute;
-                        width: 100%;
+                        width: 75%;
                         left: 50%;
                         top: 45%;
                         transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
@@ -631,7 +631,7 @@ $undertone-transparent: rgba(35, 36, 41, 0.1);
                     }
                     .msgBox {
                         position: absolute;
-                        width: 100%;
+                        width: 75%;
                         left: 50%;
                         top: 45%;
                         transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
@@ -1075,7 +1075,7 @@ $undertone-transparent: rgba(35, 36, 41, 0.1);
             justify-content: center;    /* 内容水平居中 */
             align-items: center;        /* 内容垂直居中 */
             .wrap {
-                width: 85%;
+                width: 90%;
                 display: flex;                      /* flex 布局 */
                 justify-content: space-between;     /* 两端对齐 */
                 .left {
@@ -1159,7 +1159,7 @@ $undertone-transparent: rgba(35, 36, 41, 0.1);
                     }
                     .msgBox {
                         position: absolute;
-                        width: 100%;
+                        width: 80%;
                         left: 50%;
                         top: 45%;
                         transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
@@ -1489,7 +1489,7 @@ $undertone-transparent: rgba(35, 36, 41, 0.1);
                             }
                         }
                         .emptyPosts {
-                            height: 64px;
+                            height: 100px;
                             display: flex;
                             justify-content: center;    /* 内容水平居中 */
                             align-items: center;        /* 内容垂直居中 */

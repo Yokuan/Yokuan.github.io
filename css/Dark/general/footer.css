@@ -203,6 +203,9 @@
             align-items: center; /* 内容垂直居中 */
     white-space: nowrap; /* 强制不换行 */
   }
+  .footer .container .wrap .icp a {
+    text-decoration: none; /* 取消下划线 */
+  }
   .footer .container .wrap .icp a p {
     padding: 4px 0px;
     text-align: center;
@@ -225,6 +228,9 @@
         -ms-flex-align: center;
             align-items: center; /* 内容垂直居中 */
     white-space: nowrap; /* 强制不换行 */
+  }
+  .footer .container .wrap .copyright a {
+    text-decoration: none; /* 取消下划线 */
   }
   .footer .container .wrap .copyright a p {
     padding: 4px 0px;
